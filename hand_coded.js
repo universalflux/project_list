@@ -2,6 +2,7 @@
 
 $(document).ready(function(){
 var coolClass = "green-text" + " text-lighten-4";
+$('#slideout-item-1').hide();
 // (function floaty(){
 //   $('.float').animate({bottom: '+=3px'},900, function(){
 //     $('.float').animate({bottom: '-=3px'},900, floaty())
@@ -31,11 +32,12 @@ $('.top-divs, .nav-link').on('click', (e) => {
      url: '/project_details',
      cache: false,
   success: (result) => {
+    let currentDiv;
+    let obtained = $('#flashy-content');
      console.log("Success" + result);
-     let obtained = $('#flashy-content');
      obtained.html(result);
      $('#put-here').html(selectedDiv);
-     let currentDiv = $('#' + selectedDiv.id)
+     currentDiv = $('#' + selectedDiv.id)
      currentDiv.animate({
        left: "+=400",
        width: "+=80",
@@ -50,11 +52,20 @@ $('.top-divs, .nav-link').on('click', (e) => {
   });
 });
 
+
   $(".button-collapse").sideNav({
-    menuWidth: 400,
-    closeOnClick: false
+    menuWidth: 400
   });
 
+
+  $('.plus-icon').click((e)=>{
+    $('#slideout-item-1').slideDown();
+    e.stopPropagation();
+  })
+
+  $('.input-data').click((e)=>{
+    e.stopPropagation();
+  })
 
   $('.top-icon').mouseover(function(){
     $(this)
