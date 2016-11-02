@@ -1,0 +1,93 @@
+
+  <head>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:700" rel="stylesheet">
+
+    <link href="/materialize.css" rel = "stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/style.css" rel = "stylesheet">
+    <script src="/jquery.js"></script>
+    <script src="/materialize.js"></script>
+    <script src="/hand_coded.js"></script>
+  </head>
+  <body class = "grey darken-4">
+
+
+  <div class = "top-bar left grey darken-3 z-depth-1">
+    <div class = "corner-circle circle center left blue darken-4 z-depth-5">
+    <a href = "#" data-activates = "slide-out" class = "button-collapse"><i class = "top-icon large material-icons white-text text-lighten-1"> playlist_add </i></a>
+    </div>
+    <h3 id = "page-title" class = "white-text center title-font"> Current Projects </h3>
+  </div>
+
+  <div class = "left-bar left grey darken-3 z-depth-1">
+  </div>
+    <ul id = "slide-out" class = "side-nav black center">
+      <li class = "main-nav-items"><h5 class = "white-text">Alpha Zero </h5>
+        <a class = "dropdown-button btn black" href = "#" data-activates="dropdown-a"><img class = "down-arrow" src = "http://www.freeiconspng.com/uploads/arrow-down-icon-png-9.png"></a>
+        <ul id = "dropdown-a" class = "dropdown-content black center">
+          <li class = "blue darken-1"><h5 class = "white-text left "> Presentations </h5>
+            <img class = "plus-icon" id = "wolf" src = "https://cdn4.iconfinder.com/data/icons/linecon/512/add-128.png">
+            <div class = "slideout-item" ><br/>
+            <ul id = "">
+              <li><div class = "input-field"><input class = "input-data white-text" type = "text" placeholder = ""></div></li>
+            </ul>
+          </div>
+          </li>
+          <li class = "blue darken-3"><h5 class = "white-text left"> Media </h5></li>
+        </ul>
+      </li>
+      <li class = "main-nav-items" value = "beta"><a class = ""><h5 class = "white-text"> Beta One </h5></a>
+        <a class = "dropdown-button btn black" href = "#" data-activates="dropdown-b"><img class = "down-arrow" src = "http://www.freeiconspng.com/uploads/arrow-down-icon-png-9.png"></a>
+        <ul id = "dropdown-b" class = "dropdown-content black center">
+          <li class = "blue darken-1"><h5 class = "white-text left "> Presentations </h5>
+            <img class = "plus-icon" id = "beta" src = "https://cdn4.iconfinder.com/data/icons/linecon/512/add-128.png">
+            <div class = "slideout-item" ><br/>
+            <ul id = "">
+              <li><div class = "input-field"><input class = "input-data white-text" type = "text" placeholder = ""></div></li>
+            </ul>
+          </div>
+          </li>
+          <li class = "blue darken-3"><h5 class = "white-text left"> Media </h5></li>
+        </ul>
+      </li>
+      <li class = "main-nav-items" value = "cali" ><a class = ""><h5 class = "white-text"> Cali Two </h5></a>
+        <img class = "down-arrow" src = "http://www.freeiconspng.com/uploads/arrow-down-icon-png-9.png">
+      </li>
+      <li class = "main-nav-items" value = "darwin"><a class = ""><h5 class = "white-text"> Darwin Three </h5></a>
+        <img class = "down-arrow" src = "http://www.freeiconspng.com/uploads/arrow-down-icon-png-9.png">
+      </li>
+      <li class = "main-nav-items" value = "enigma"><a class = ""><h5 class = "white-text"> Enigma Four </h5></a>
+        <img class = "down-arrow" src = "http://www.freeiconspng.com/uploads/arrow-down-icon-png-9.png">
+      </li>
+      <li class = "main-nav-items" value = "failsafe"><a class = ""><h5 class = "white-text"> FS-Five </h5></a>
+        <img class = "down-arrow" src = "http://www.freeiconspng.com/uploads/arrow-down-icon-png-9.png">
+      </li>
+    </ul>
+  </div>
+
+  <div id = "flashy-content" class = "container">
+    <div class = "row pull-up">
+      <div id = "alpha-zero" value = "alpha-zero" class = "col s12 m6 l3 blue darken-4 push-right z-depth-3 top-divs float">
+        <h1 class = "zero-marg white-text center"> Alpha Zero </h1>
+      </div>
+      <div id = "beta-one" value = "beta-one" class = "col s12 m6 l3 blue darken-4 push-right z-depth-3 top-divs float-b">
+        <h1 class = "zero-marg white-text center"> Beta One </h1>
+        <img id = "beta-skull" src = "http://images.clipshrine.com/getimg/PngMedium-Skull-and-Crossbones-50630.png">
+      </div>
+      <div id = "cali-two" value = "cali-two" class = "col s12 m6 l3 blue darken-4 push-right-last z-depth-3 top-divs float">
+        <h1 class = "zero-marg white-text center"> Cali Two </h1>
+      </div>
+      <div id = "darwin-three" value = "darwin-three" class = "col s12 m6 l3 blue darken-4 push-right z-depth-3 top-divs float-b">
+        <h1 class = "zero-marg white-text center"> Darwin Three </h1>
+      </div>
+      <div id = "enigma-four" value = "enigma-four" class = "col s12 m6 l3 blue darken-4 push-right z-depth-3 top-divs float">
+        <h1 class = "zero-marg white-text center"> Enigma Four </h1>
+      </div>
+      <div id = "failsafe-five" value = "failsafe-five" class = "col s12 m6 l3 blue darken-4 push-right-last z-depth-3 top-divs float-b">
+        <h1 class = "zero-marg white-text center"> Fail-Safe Five </h1>
+      </div>
+    </div>
+  </div>
+
+  </body>
