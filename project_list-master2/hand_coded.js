@@ -71,12 +71,6 @@ function displayProj(currentDiv) {
   });
 };  
 
-//Assuming the new li items fall under ul#list-new
-var list_new = $('#list_new').html();
-//Now replace the old one
-$('#list-old').empty().append(list_new);  
-
-
   $('.container').on('click', '.secondary', function (){
     var floatA = "col s12 m6 l3 blue darken-4 push-right-second z-depth-3 top-divs float";
     var clone = $(this).clone().removeClass().addClass(floatA);  
