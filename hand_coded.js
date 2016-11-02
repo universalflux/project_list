@@ -2,7 +2,8 @@
 
 $(document).ready(function(){
 var coolClass = "green-text" + " text-lighten-4";
-$('#slideout-item-1').hide();
+let clickCount = 0;
+$('.slideout-item').hide();
 // (function floaty(){
 //   $('.float').animate({bottom: '+=3px'},900, function(){
 //     $('.float').animate({bottom: '-=3px'},900, floaty())
@@ -37,7 +38,7 @@ $('.top-divs, .nav-link').on('click', (e) => {
      console.log("Success" + result);
      obtained.html(result);
      $('#put-here').html(selectedDiv);
-     currentDiv = $('#' + selectedDiv.id)
+     currentDiv = $('#' + selectedDiv.id);
      currentDiv.animate({
        left: "+=400",
        width: "+=80",
@@ -52,15 +53,22 @@ $('.top-divs, .nav-link').on('click', (e) => {
   });
 });
 
-
   $(".button-collapse").sideNav({
     menuWidth: 400
   });
 
-
-  $('.plus-icon').click((e)=>{
-    $('#slideout-item-1').slideDown();
+  $('.plus-icon').click((e) => {
+    if(clickCount <= 0) {
+    $(e.currentTarget).next().slideDown();
     e.stopPropagation();
+    clickCount += 1;
+    return clickCount;
+  } else {
+    $(e.currentTarget).next().slideUp();
+    clickCount -= 1;
+    e.stopPropagation();
+    return clickCount;
+  }
   })
 
   $('.input-data').click((e)=>{
