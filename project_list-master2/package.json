@@ -1,0 +1,23 @@
+{
+  "name": "project_list",
+  "version": "1.0.0",
+  "description": "This is a website design to showcase my clients future projects. All pictures and media here linked to other sites are not going to be utilized in commercial use.  Right now all media is only to showcase potential.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/universalflux/project_list.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/universalflux/project_list/issues"
+  },
+  "homepage": "https://github.com/universalflux/project_list#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  }
+}
