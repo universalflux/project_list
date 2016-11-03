@@ -2,6 +2,24 @@ body {
   background: linear-gradient(to right, #1178FD 10%,#1F6AA4 99%);
 }
 
+.access-divs {
+  margin-top: 100px;
+/* Fixes max size for floating divs on the main page. */
+  width: 200px;
+  height: 150px;
+  overflow: hidden;
+  display: none;
+}
+
+.main {
+  width:200px;
+  height: 250px;
+  margin-top: 100px;
+  margin-right: 120px;
+  display: none;
+  z-index: 1000;
+}
+
 .float {
   animation: floatme 4s infinite;
   -webkit-animation: floatme 4s infinite;
@@ -147,7 +165,7 @@ body {
   width: 100%;
   margin: none;
   padding: none;
-  z-index: 2;
+  z-index: 9999;
 }
 
 #page-title {
@@ -176,8 +194,11 @@ body {
 
 .push-right {
   margin-right: 120px;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
 }
+
+
+
 
 .push-right-last {
   margin-right: 20px;
@@ -200,6 +221,7 @@ body {
   opacity: 0.7;
   padding-top: 25px;
   margin-top: 60px;
+  /*z-index: 3;*/
 }
 
 .down-arrow {
@@ -209,6 +231,7 @@ body {
 
 .main-nav-items {
   margin-bottom: 50px;
+  /*z-index: 4;*/
 }
 
 ul > li {
@@ -258,7 +281,7 @@ ul > li > h5 {
 
 .dropdown-content {
   margin-left: 17px;
-  margin-top: 10px;
+  /*margin-top: 10px;*/
 }
 
 .plus-icon {

@@ -1,9 +1,8 @@
-
-
 $(document).ready(function(){
 var coolClass = "green-text" + " text-lighten-4";
 let clickCount = 0;
 $('.slideout-item').hide();
+
 // (function floaty(){
 //   $('.float').animate({bottom: '+=3px'},900, function(){
 //     $('.float').animate({bottom: '-=3px'},900, floaty())
@@ -29,28 +28,28 @@ $('.slideout-item').hide();
 
 $('.top-divs, .nav-link').on('click', (e) => {
   let selectedDiv = e.currentTarget;
-  $.get({
+  $.ajax({
+     type: 'GET',
      url: '/project_details',
      cache: false,
   success: (result) => {
     let currentDiv;
     let obtained = $('#flashy-content');
+    let script = document.createElement('script');
+    script.src = '/project_details.js';
+    document.body.appendChild(script);
      console.log("Success" + result);
      obtained.html(result);
-     $('#put-here').html(selectedDiv);
+     $('#put-here').html(selectedDiv.innerHTML);
+     $('#put-here').attr('id', selectedDiv.id);
      currentDiv = $('#' + selectedDiv.id);
-     currentDiv.animate({
-       left: "+=400",
-       width: "+=80",
-       height: "+=80"
-    }, 800)
+    //  currentDiv.addClass('float');
   },
   error: (err) => {
     console.log("err" + JSON.stringify(err));
     }
   }, 'html', () => {
-    //nothing
-  });
+  })
 });
 
   $(".button-collapse").sideNav({
@@ -86,4 +85,6 @@ $('.top-divs, .nav-link').on('click', (e) => {
     .removeClass('green-text', 5000)
     .addClass('white-text', 5000);
   });
+
+
 });
