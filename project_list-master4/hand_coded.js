@@ -27,7 +27,7 @@ $('.slideout-item').hide();
   // (incoming, projects) => {
   //   let projectName = incoming;
 
-$('.top-divs, .nav-link').on('click', (e) => {
+$('.top-divs, .bottom-divs, .nav-link').on('click', (e) => {
   let selectedDiv = e.currentTarget;
   $.get({
      url: '/project_details',
@@ -41,7 +41,7 @@ $('.top-divs, .nav-link').on('click', (e) => {
        left: "+=50",
        width: "+=70",
        height: "+=80"
-    }, 800),
+    }, 700),
     displayProj(currentDiv);
   },
   error: (err) => {
@@ -53,8 +53,8 @@ $('.top-divs, .nav-link').on('click', (e) => {
 });
 
 function displayProj(currentDiv) {
-  var floatA = "col s12 m6 l3 blue darken-4 push-right-second z-depth-3 top-divs float";
-  var floatB = "col s12 m6 l3 blue darken-4 push-right-second z-depth-3 top-divs float-b";
+  var floatA = "col s12 m6 l3 blue darken-4 push-right-second z-depth-3 top-divs-second float";
+  var floatB = "col s12 m6 l3 blue darken-4 push-right-second z-depth-3 top-divs-second float-b";
   $.get({
      url: '/secondary',
      cache: false,
@@ -64,8 +64,9 @@ function displayProj(currentDiv) {
         .removeClass()
         .addClass(floatA)
         .insertBefore('#progress');
-      $("#put-here > :nth-child(5n)").css("margin-left", "35px");
-      $("#put-here > :nth-child(6n)").css("margin-left", "35px");
+        console.log($('#put-here .bottom').children());
+      $(".container #put-here .bottom:nth(1)").css("margin-left", "35px");
+    
       $('.secondary').animate({
         left: "+=50",
         }, 700) 
@@ -75,11 +76,11 @@ function displayProj(currentDiv) {
 
 $('.container').on('click', '.secondary', function (){
   var floatA = "col s12 m6 l3 blue darken-4 push-right-second z-depth-3 top-divs float";
-  var clone  = $(this).clone().removeClass().addClass(floatA);  
-    $('.container #put-here')
+  var clone  = $(this).clone().removeClass().addClass(floatA);
+    $('.container #put-here .top')
       .children()
       .eq(1)
-      .replaceWith(clone)
+      .replaceWith(clone);
  });
 
   $(".button-collapse").sideNav({
