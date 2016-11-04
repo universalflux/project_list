@@ -26,7 +26,7 @@ $('.slideout-item').hide();
   // (incoming, projects) => {
   //   let projectName = incoming;
 
-$('.top-divs, .nav-link').on('click', (e) => {
+$('.top-divs, .bottom-divs, .nav-link').on('click', (e) => {
   let selectedDiv = e.currentTarget;
   $.ajax({
      type: 'GET',

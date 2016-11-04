@@ -118,6 +118,22 @@ body {
   background-position: center;
 }
 
+#alpha-zero-1 {
+  background-image: url('/wolf.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+
+#alpha-zero-back {
+  background-image: url('/wolf.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: .7;
+  z-index: 2;
+}
+
 #beta-one {
   background-image: url('/hand.png');
   background-size:cover;
@@ -193,18 +209,27 @@ body {
 }
 
 .push-right {
-  margin-right: 120px;
-  margin-bottom: 50px;
+  margin-right: 100px;
+  margin-bottom: 0px;
+  border-radius: 5px;
 }
-
-
-
 
 .push-right-last {
   margin-right: 20px;
+  border-radius: 5px;
 }
 
 .top-divs {
+  margin-top: 140px;
+/* Fixes max size for floating divs on the main page. */
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+}
+
+
+.bottom-divs {
+  margin-left: 10px;
   margin-top: 100px;
 /* Fixes max size for floating divs on the main page. */
   width: 300px;
@@ -212,11 +237,24 @@ body {
   overflow: hidden;
 }
 
+
+.center-top {
+  margin-top: 60px;
+}
+
+.center-bottom {
+  margin-top: 180px;
+}
+
 .row {
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
 
+/*.row:after {
+  clear: none;
+}
+*/
 .side-nav {
   opacity: 0.7;
   padding-top: 25px;
@@ -302,6 +340,62 @@ ul > li > h5 {
 .title-font {
   font-family: 'Droid Sans', sans-serif;
   font-weight: bold;
-  opacity: 0.8;
+  opacity: 0.9;
   font-size: 40px;
+}
+
+/* Flip Animation */
+
+.flip-container {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+}
+
+.flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+  width: 300px;
+  height: 200px;
+}
+
+.flip-container .back img {
+  background-color: black;
+}
+
+.flipper {
+  -webkit-transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+
+  -moz-transition: 0.6s;
+  -moz-transform-style: preserve-3d;
+  
+  -o-transition: 0.6s;
+  -o-transform-style: preserve-3d;
+
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+.front, .back {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
