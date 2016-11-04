@@ -344,9 +344,27 @@ ul > li > h5 {
   font-size: 40px;
 }
 
+.top-divs:hover, .bottom-divs:hover, .access-divs:hover {
+  opacity: .7;
+  box-shadow: 0 0 20px white;
+  text-shadow: 0 0 5px #ff0000;
+}
+
+#beta-one:hover, #darwin-three:hover, #failsafe-five:hover {
+    text-shadow: 0 0 5px #5DFC0A;
+}
+
+
+
+/*.row:hover {
+  font-weight: bold;
+  color: #fff;
+}*/
+
+
 /* Flip Animation */
 
-.flip-container {
+/*.flip-container {
   -webkit-perspective: 1000;
   -moz-perspective: 1000;
   -o-perspective: 1000;
@@ -399,3 +417,34 @@ ul > li > h5 {
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
+
+.card-container {
+  height: 150px;
+  perspective: 600;
+  position: relative;
+  width: 150px;
+}
+.card {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
+}
+.card:hover {
+  transform: rotateY(180deg);
+}
+.card .side {
+  backface-visibility: hidden;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.card .back {
+  transform: rotateY(180deg);
+}
+
+*/
+
+
+
