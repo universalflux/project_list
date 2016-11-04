@@ -12,9 +12,11 @@ $(document).ready(() => {
   // })();
 
 $('.access-divs').on('click',(e) => {
+  $(e.currentTarget).children('.white-text').removeClass('flow-text');
   $('.main').html(e.currentTarget.innerHTML);
+  $(e.currentTarget).children('.white-text').addClass('flow-text');
 });
-$('.main').show();
- $('.access-divs').fadeIn();
+$('.main').fadeIn(1000);
+$('.access-divs').fadeIn(4000);
 
  })

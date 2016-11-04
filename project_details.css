@@ -78,7 +78,7 @@
 }
 
 .float-main {
-  animation: floatMain 4s infinite;
-  -webkit-animation: floatMain 4s infinite;
+  animation: floatMain 2s infinite;
+  -webkit-animation: floatMain 2s infinite;
   transition-timing-function: ease-in-out;
 }
