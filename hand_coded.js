@@ -1,7 +1,23 @@
+
+
 $(document).ready(function(){
 var coolClass = "green-text" + " text-lighten-4";
 let clickCount = 0;
 $('.slideout-item').hide();
+
+
+$('#alpha-team-btn').on('click', function (){
+  var newTeam = $('#alpha-team-input').val();
+  var alpha = $('#alpha-zero');
+
+  alpha.attr({'team': newTeam});
+  // console.log(alpha.attr('team'));
+});
+
+$('.container').on( 'click', function() {
+  // console.log($('#alpha-zero').attr('team'));
+});
+
 
 // (function floaty(){
 //   $('.float').animate({bottom: '+=3px'},900, function(){
@@ -28,6 +44,8 @@ $('.slideout-item').hide();
 
 $('.top-divs, .bottom-divs, .nav-link').on('click', (e) => {
   let selectedDiv = e.currentTarget;
+  let currentDiv  = $('#' + selectedDiv.id);
+  let selectedTeam = currentDiv.attr('team');
   $.ajax({
      type: 'GET',
      url: '/project_details',
@@ -38,11 +56,11 @@ $('.top-divs, .bottom-divs, .nav-link').on('click', (e) => {
     let script = document.createElement('script');
     script.src = '/project_details.js';
     document.body.appendChild(script);
-     console.log("Success" + result);
+     // console.log("Success" + result);
      obtained.html(result);
+     $('#put-here').attr('team', selectedTeam);
      $('#put-here').html(selectedDiv.innerHTML);
      $('#put-here').attr('id', selectedDiv.id);
-     currentDiv = $('#' + selectedDiv.id);
     //  currentDiv.addClass('float');
   },
   error: (err) => {

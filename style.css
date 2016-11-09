@@ -176,6 +176,12 @@ body {
   background-position: center;
 }
 
+#data-display {
+  background-color: white;
+  width: 100px;
+  height: 100px;
+}
+
 .top-bar {
   height: 60px;
   width: 100%;
