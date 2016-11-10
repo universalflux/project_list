@@ -19,33 +19,63 @@ var beta_sumArr = [];
 var beta_progArr = [];
 var beta_testArr = [];
 
+// Cali Arrays
+var cali_teamArr = [];
+var cali_medArr = [];
+var cali_sumArr = [];
+var cali_progArr = [];
+var cali_testArr = [];
+
+//  Darwin Arrays
+var darwin_teamArr = [];
+var darwin_medArr = [];
+var darwin_sumArr = [];
+var darwin_progArr = [];
+var arwin_testArr = [];
+
+
+// Enigma Arrays
+var enigma_teamArr = [];
+var enigma_medArr = [];
+var enigma_sumArr = [];
+var enigma_progArr = [];
+var enigma_testArr = [];
+
+// Failsafe Arrays
+var failsafe_teamArr = [];
+var failsafe_medArr = [];
+var failsafe_sumArr = [];
+var failsafe_progArr = [];
+var failsafe_testArr = [];
+
 
 // Sidenav Functions
 
 // Add Team
 $('.team-btn').on('click', function (){
-  var newTeam = $('.team-input').val(),
-      dropDiv = $(this).parent().attr('class'),
-      divID   = $('#' + dropDiv.slice(0,-4));
+  var dropDiv = $(this).parent().attr('class'),
+      divName = dropDiv.slice(0,-4),
+      divID   = $('#' + divName),
+      newTeam = $('.' + divName  + '-' + 'team-input').val();
 
-    if (dropDiv == 'alphaDrop') {
+    if (divName == 'alpha') {
       alpha_teamArr.push(newTeam);
       divID.attr({'team': alpha_teamArr});
-    } else if (dropDiv == 'betaDrop') {
+    } else if (divName == 'beta') {
       beta_teamArr.push(newTeam);
       divID.attr({'team': beta_teamArr});
-    } else if (dropDiv == 'caliDrop') {
+    } else if (divName == 'cali') {
       cali_teamArr.push(newTeam);
       divID.attr({'team': cali_teamArr});
-    } else if (dropDiv == 'darwinDrop') {
+    } else if (divName == 'darwin') {
       darwin_teamArr.push(newTeam);
       divID.attr({'team': darwin_teamArr});
-    } else if (dropDiv == 'failsafeDrop') {
+    } else if (divName == 'failsafe') {
       failsafe_teamArr.push(newTeam);
       divID.attr({'team': failsafe_teamArr});
     };
-  // $('.main').append('<div class="itemShow"></div>')
-  // $('.itemShow').html(items);
+  $('.main').append('<div class="itemShow"></div>')
+  $('.itemShow').html(items);
 });
 
 
