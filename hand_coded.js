@@ -5,17 +5,47 @@ var coolClass = "green-text" + " text-lighten-4";
 let clickCount = 0;
 $('.slideout-item').hide();
 
+// Alpha Arrays
+var alpha_teamArr = [];
+var alpha_medArr = [];
+var alpha_sumArr = [];
+var alpha_progArr = [];
+var alpha_testArr = [];
 
-$('#alpha-team-btn').on('click', function (){
-  var newTeam = $('#alpha-team-input').val();
-  var alpha = $('#alpha-zero');
+// Beta Arrays
+var beta_teamArr = [];
+var beta_medArr = [];
+var beta_sumArr = [];
+var beta_progArr = [];
+var beta_testArr = [];
 
-  alpha.attr({'team': newTeam});
-  // console.log(alpha.attr('team'));
-});
 
-$('.container').on( 'click', function() {
-  // console.log($('#alpha-zero').attr('team'));
+// Sidenav Functions
+
+// Add Team
+$('.team-btn').on('click', function (){
+  var newTeam = $('.team-input').val(),
+      dropDiv = $(this).parent().attr('class'),
+      divID   = $('#' + dropDiv.slice(0,-4));
+
+    if (dropDiv == 'alphaDrop') {
+      alpha_teamArr.push(newTeam);
+      divID.attr({'team': alpha_teamArr});
+    } else if (dropDiv == 'betaDrop') {
+      beta_teamArr.push(newTeam);
+      divID.attr({'team': beta_teamArr});
+    } else if (dropDiv == 'caliDrop') {
+      cali_teamArr.push(newTeam);
+      divID.attr({'team': cali_teamArr});
+    } else if (dropDiv == 'darwinDrop') {
+      darwin_teamArr.push(newTeam);
+      divID.attr({'team': darwin_teamArr});
+    } else if (dropDiv == 'failsafeDrop') {
+      failsafe_teamArr.push(newTeam);
+      divID.attr({'team': failsafe_teamArr});
+    };
+  // $('.main').append('<div class="itemShow"></div>')
+  // $('.itemShow').html(items);
 });
 
 

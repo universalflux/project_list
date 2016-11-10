@@ -9,6 +9,7 @@ body {
   height: 150px;
   overflow: hidden;
   display: none;
+  border-radius: 5px;
 }
 
 .main {
@@ -18,6 +19,7 @@ body {
   margin-right: 120px;
   display: none;
   position: relative;
+  border-radius: 5px;
 }
 
 .float {
@@ -111,30 +113,14 @@ body {
 
 }
 
-#alpha-zero {
+#alpha {
   background-image: url('/wolf.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-#alpha-zero-1 {
-  background-image: url('/wolf.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  
-}
-
-#alpha-zero-back {
-  background-image: url('/wolf.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: .7;
-  z-index: 2;
-}
-
-#beta-one {
+#beta {
   background-image: url('/hand.png');
   background-size:cover;
   background-repeat:no-repeat;
@@ -148,38 +134,32 @@ body {
   width: 90px;
 }
 
-#cali-two {
+#cali {
   background-image: url('/california.jpg');
   background-size:cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-#darwin-three {
+#darwin {
   background-image: url('/evolution.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-#enigma-four {
+#enigma {
   background-image: url('/inception.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-#failsafe-five {
+#failsafe  {
   background-image: url('/runman.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-#data-display {
-  background-color: white;
-  width: 100px;
-  height: 100px;
 }
 
 .top-bar {
@@ -350,6 +330,10 @@ ul > li > h5 {
   font-size: 40px;
 }
 
+.itemShow {
+  background-color: white;
+}
+
 .top-divs:hover, .bottom-divs:hover, .access-divs:hover {
   opacity: .7;
   box-shadow: 0 0 20px white;
@@ -360,12 +344,6 @@ ul > li > h5 {
     text-shadow: 0 0 5px #5DFC0A;
 }
 
-
-
-/*.row:hover {
-  font-weight: bold;
-  color: #fff;
-}*/
 
 
 /* Flip Animation */

@@ -12,9 +12,19 @@ $(document).ready(() => {
   // })();
 
 $('.access-divs').on('click',(e) => {
-  $(e.currentTarget).children('.white-text').removeClass('flow-text');
+  var divId   = e.currentTarget.id,
+      mainId  = $('.main').attr('id'),
+      current = e.currentTarget,
+      items   = $('#' + mainId).attr(divId);
+
+
+  $(current).children('.white-text').removeClass('flow-text');
   $('.main').html(e.currentTarget.innerHTML);
-  $(e.currentTarget).children('.white-text').addClass('flow-text');
+  $(current).children('.white-text').addClass('flow-text');
+  $('.main').append('<div class="itemShow"></div>')
+  $('.itemShow').html(items);
+   // $('#console').text(JSON.stringify(o)); 
+
 });
 $('.main').fadeIn(1000);
 $('.access-divs').fadeIn(4000);
