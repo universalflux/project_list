@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
+var currentPort = process.env.PORT || 2100;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname));
@@ -17,6 +18,6 @@ app.get('/project_details', (req, res) => {
   res.render('project_details');
 })
 
-app.listen(2100, function(){
+app.listen(currentPort, function(){
   console.log("Hello 2100");
 });
