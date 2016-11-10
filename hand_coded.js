@@ -50,61 +50,70 @@ var failsafe_testArr = [];
 
 // Hard Coded Project Objects
 
-// let alphaZero = {
-//   name = "Alpha Zero",
-//   summary = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
-//   progress = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
-//   team = ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
-//   tests = ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
-//   media = ['string_for_media_file']
-// };
+let alphaZero = {
+  name:"Alpha Zero",
+  summary: "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+  progress: "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+  team: ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
+  tests: ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
+  media: ['string_for_media_file']
+};
 
-// let betaOne = {
-//   name = "Beta One",
-//   summary = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
-//   progress = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
-//   team = ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
-//   tests = ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
-//   media = ['string_for_media_file']
-// };
+let betaOne = {
+  name:"Beta One",
+  summary: "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+  progress: "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+  team: ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
+  tests: ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
+  media: ['string_for_media_file']
+};
 
-// let caliTwo = {
-//   name = "Cali Two",
-//   summary = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
-//   progress = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
-//   team = ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
-//   tests = ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
-//   media = ['string_for_media_file']
-// };
+let caliTwo = {
+  name: "Cali Two",
+  summary: "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+  progress: "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+  team: ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
+  tests: ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
+  media: ['string_for_media_file']
+};
 
-// let darwinThree = {
-//   name = "Darwin Three",
-//   summary = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
-//   progress = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
-//   team = ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
-//   tests = ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
-//   media = ['string_for_media_file']
-// };
+let darwinThree = {
+  name:"Darwin Three",
+  summary: "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+  progress: "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+  team: ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
+  tests: ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
+  media: ['string_for_media_file']
+};
 
-// let enigmaFour = {
-//   name = "Enigma Four",
-//   summary = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
-//   progress = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
-//   team = ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
-//   tests = ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
-//   media = ['string_for_media_file']
-// };
+let enigmaFour = {
+  name:"Enigma Four",
+  summary: "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+  progress: "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+  team: ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
+  tests: ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
+  media: ['string_for_media_file']
+};
 
-// let fsFive = {
-//   name = "Failsafe Five",
-//   summary = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
-//   progress = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
-//   team = ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
-//   tests = ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
-//   media = ['string_for_media_file']
-// };
+let fsFive = {
+  name: "Failsafe Five",
+  summary: "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+  progress: "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+  team: ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
+  tests: ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
+  media: ['string_for_media_file']
+};
 
-$('.slideout-item').hide();
+// Code To Create a New Project Div
+
+let createNew = (data) => {
+  let projectName = data.name + 'Nhc';
+  let newDiv;
+  newDiv += "<div id = '" + data.name.slice(0, ' ').toLowerCase() + "' class = 'col s12 m6 l3 blue darken-4 push-right z-depth-3 top-divs float'>";
+  newDiv += '<h1 class = "zero-marg white-text center">'+ data.name ' </h1>';
+  newDiv += '</div>';
+  $('#flashyContent').append(newDiv);
+};
 
 // Sidenav Functions
 
@@ -161,6 +170,8 @@ $('.team-btn').on('click', function (){
   /* javascript goes here temporarily */
   // (incoming, projects) => {
   //   let projectName = incoming;
+
+$('.slideout-item').hide();  
 
 $('.top-divs, .bottom-divs, .nav-link').on('click', (e) => {
   let selectedDiv = e.currentTarget;
