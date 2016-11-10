@@ -20,6 +20,62 @@ var beta_progArr = [];
 var beta_testArr = [];
 
 
+// Hard Coded Project Objects
+
+let alphaZero = {
+  name = "Alpha Zero",
+  summary = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+  progress = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+  team = ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
+  tests = ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
+  media = ['string_for_media_file']
+};
+
+let betaOne = {
+  name = "Beta One",
+  summary = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+  progress = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+  team = ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
+  tests = ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
+  media = ['string_for_media_file']
+};
+
+let caliTwo = {
+  name = "Cali Two",
+  summary = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+  progress = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+  team = ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
+  tests = ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
+  media = ['string_for_media_file']
+};
+
+let darwinThree = {
+  name = "Darwin Three",
+  summary = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+  progress = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+  team = ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
+  tests = ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
+  media = ['string_for_media_file']
+};
+
+let enigmaFour = {
+  name = "Enigma Four",
+  summary = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+  progress = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+  team = ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
+  tests = ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
+  media = ['string_for_media_file']
+};
+
+let fsFive = {
+  name = "Failsafe Five",
+  summary = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+  progress = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+  team = ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
+  tests = ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
+  media = ['string_for_media_file']
+};
+
 // Sidenav Functions
 
 // Add Team
