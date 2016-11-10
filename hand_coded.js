@@ -3,7 +3,6 @@
 $(document).ready(function(){
 var coolClass = "green-text" + " text-lighten-4";
 let clickCount = 0;
-$('.slideout-item').hide();
 
 // Alpha Arrays
 var alpha_teamArr = [];
@@ -51,59 +50,61 @@ var failsafe_testArr = [];
 
 // Hard Coded Project Objects
 
-let alphaZero = {
-  name = "Alpha Zero",
-  summary = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
-  progress = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
-  team = ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
-  tests = ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
-  media = ['string_for_media_file']
-};
+// let alphaZero = {
+//   name = "Alpha Zero",
+//   summary = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+//   progress = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+//   team = ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
+//   tests = ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
+//   media = ['string_for_media_file']
+// };
 
-let betaOne = {
-  name = "Beta One",
-  summary = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
-  progress = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
-  team = ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
-  tests = ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
-  media = ['string_for_media_file']
-};
+// let betaOne = {
+//   name = "Beta One",
+//   summary = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+//   progress = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+//   team = ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
+//   tests = ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
+//   media = ['string_for_media_file']
+// };
 
-let caliTwo = {
-  name = "Cali Two",
-  summary = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
-  progress = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
-  team = ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
-  tests = ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
-  media = ['string_for_media_file']
-};
+// let caliTwo = {
+//   name = "Cali Two",
+//   summary = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+//   progress = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+//   team = ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
+//   tests = ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
+//   media = ['string_for_media_file']
+// };
 
-let darwinThree = {
-  name = "Darwin Three",
-  summary = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
-  progress = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
-  team = ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
-  tests = ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
-  media = ['string_for_media_file']
-};
+// let darwinThree = {
+//   name = "Darwin Three",
+//   summary = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+//   progress = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+//   team = ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
+//   tests = ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
+//   media = ['string_for_media_file']
+// };
 
-let enigmaFour = {
-  name = "Enigma Four",
-  summary = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
-  progress = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
-  team = ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
-  tests = ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
-  media = ['string_for_media_file']
-};
+// let enigmaFour = {
+//   name = "Enigma Four",
+//   summary = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+//   progress = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+//   team = ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
+//   tests = ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
+//   media = ['string_for_media_file']
+// };
 
-let fsFive = {
-  name = "Failsafe Five",
-  summary = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
-  progress = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
-  team = ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
-  tests = ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
-  media = ['string_for_media_file']
-};
+// let fsFive = {
+//   name = "Failsafe Five",
+//   summary = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+//   progress = "This is a demo synopsis and I hear the Alpha Zero project is coming along nicely.",
+//   team = ['Roger', 'Ryan', 'Michael', 'Tobias', 'Marjorie'],
+//   tests = ['Product fails environmental standards, looking to reduce CO2 emissions.', 'Product functionality has exceeded expectations.'],
+//   media = ['string_for_media_file']
+// };
+
+$('.slideout-item').hide();
 
 // Sidenav Functions
 
@@ -112,7 +113,8 @@ $('.team-btn').on('click', function (){
   var dropDiv = $(this).parent().attr('class'),
       divName = dropDiv.slice(0,-4),
       divID   = $('#' + divName),
-      newTeam = $('.' + divName  + '-' + 'team-input').val();
+      newTeam = $('.' + divName  + '-' + 'team-input').val(),
+      items   = divID.attr('team');
 
     if (divName == 'alpha') {
       alpha_teamArr.push(newTeam);
@@ -130,10 +132,12 @@ $('.team-btn').on('click', function (){
       failsafe_teamArr.push(newTeam);
       divID.attr({'team': failsafe_teamArr});
     };
-  $('.main').append('<div class="itemShow"></div>')
-  $('.itemShow').html(items);
-});
 
+    // if ($('.container .row .main').children().length < 2 ) {
+    //   $('.container .row .main').append('<div class="itemShow"></div>') 
+    // }; 
+  $('.container .row .main .itemShow').html(divID.attr('team'));
+});
 
 // (function floaty(){
 //   $('.float').animate({bottom: '+=3px'},900, function(){
