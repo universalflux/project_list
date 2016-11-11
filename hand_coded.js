@@ -136,6 +136,9 @@ $('.team-btn').on('click', function (){
     } else if (divName == 'darwin') {
       darwin_teamArr.push(newTeam);
       divID.attr({'team': darwin_teamArr});
+    } else if (divName == 'enigma') {
+      engima_teamArr.push(newTeam);
+      divID.attr({'team': enigma_teamArr});
     } else if (divName == 'failsafe') {
       failsafe_teamArr.push(newTeam);
       divID.attr({'team': failsafe_teamArr});
@@ -166,15 +169,102 @@ $('.media-btn').on('click', function (){
     } else if (divName == 'darwin') {
       darwin_medArr.push(newMedia);
       divID.attr({'media': darwin_medArr});
+    } else if (divName == 'enigma') {
+      engima_teamArr.push(newMedia);
+      divID.attr({'media': enigma_medArr});      
     } else if (divName == 'failsafe') {
       failsafe_medArr.push(newMedia);
       divID.attr({'media': failsafe_medArr});
     };
-
-    // if ($('.container .row .main').children().length < 2 ) {
-    //   $('.container .row .main').append('<div class="itemShow"></div>') 
-    // }; 
   $('.container .row .main .itemShow').html(divID.attr('media'));
+});
+
+// Add Summary
+$('.summary-btn').on('click', function (){
+  var dropDiv = $(this).parent().attr('class'),
+      divName = dropDiv.slice(0,-4),
+      divID   = $('#' + divName),
+      newSummary = $('.' + divName  + '-' + 'summary-input').val();
+
+    if (divName == 'alpha') {
+      alpha_sumArr.push(newSummary);
+      divID.attr({'summary': alpha_sumArr});
+    } else if (divName == 'beta') {
+      beta_sumArr.push(newSummary);
+      divID.attr({'summary': beta_sumArr});
+    } else if (divName == 'cali') {
+      cali_sumArr.push(newSummary);
+      divID.attr({'summary': cali_sumArr});
+    } else if (divName == 'darwin') {
+      darwin_sumArr.push(newSummary);
+      divID.attr({'summary': darwin_sumArr});
+    } else if (divName == 'enigma') {
+      enigma_sumArr.push(newSummary);
+      divID.attr({'summary': enigma_sumArr});      
+    } else if (divName == 'failsafe') {
+      failsafe_sumArr.push(newSummary);
+      divID.attr({'summary': failsafe_sumArr});
+    };
+  $('.container .row .main .itemShow').html(divID.attr('summary'));
+});
+
+
+// Add Progress
+$('.progress-btn').on('click', function (){
+  var dropDiv = $(this).parent().attr('class'),
+      divName = dropDiv.slice(0,-4),
+      divID   = $('#' + divName),
+      newProgress = $('.' + divName  + '-' + 'progress-input').val();
+
+    if (divName == 'alpha') {
+      alpha_progArr.push(newProgress);
+      divID.attr({'progress': alpha_progArr});
+    } else if (divName == 'beta') {
+      beta_progArr.push(newProgress);
+      divID.attr({'progress': beta_progArr});
+    } else if (divName == 'cali') {
+      cali_progArr.push(newProgress);
+      divID.attr({'progress': cali_progArr});
+    } else if (divName == 'darwin') {
+      darwin_progArr.push(newProgress);
+      divID.attr({'progress': darwin_progArr});
+    } else if (divName == 'engima') {
+      engima_progArr.push(newProgress);
+      divID.attr({'progress': engima_progArr});
+    } else if (divName == 'failsafe') {
+      failsafe_progArr.push(newProgress);
+      divID.attr({'progress': failsafe_progArr});
+    };
+  $('.container .row .main .itemShow').html(divID.attr('progress'));
+});
+
+// Add Tests
+$('.tests-btn').on('click', function (){
+  var dropDiv = $(this).parent().attr('class'),
+      divName = dropDiv.slice(0,-4),
+      divID   = $('#' + divName),
+      newTests = $('.' + divName  + '-' + 'tests-input').val();
+
+    if (divName == 'alpha') {
+      alpha_testArr.push(newTests);
+      divID.attr({'tests': alpha_testArr});
+    } else if (divName == 'beta') {
+      beta_testArr.push(newTests);
+      divID.attr({'tests': beta_testArr});
+    } else if (divName == 'cali') {
+      cali_testArr.push(newTests);
+      divID.attr({'tests': cali_testArr});
+    } else if (divName == 'darwin') {
+      darwin_testArr.push(newTests);
+      divID.attr({'tests': darwin_testArr});
+    } else if (divName == 'enigma') {
+      enigma_testArr.push(newTests);
+      divID.attr({'tests': enigma_testArr});      
+    } else if (divName == 'failsafe') {
+      failsafe_testArr.push(newTests);
+      divID.attr({'tests': failsafe_testArr});
+    };
+  $('.container .row .main .itemShow').html(divID.attr('tests'));
 });
 
 
