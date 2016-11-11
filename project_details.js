@@ -22,16 +22,16 @@ $(document).ready(() => {
         current = e.currentTarget,
         items   = $('#' + mainId).attr(divId);
 
-    function listObj () {
-      var ul = $('<ul>').appendTo('.itemShow');
-      var json = { items: ['item 1', 'item 2', 'item 3'] };
+    // function listObj () {
+    //   var ul = $('<ul>').appendTo('.itemShow');
+    //   var json = { items: ['item 1', 'item 2', 'item 3'] };
       
-        $(json.items).each(function(index, item) {
-          ul.append(  
-            $(document.createElement('li')).text(item)
-          );
-        }); 
-    }
+    //     $(json.items).each(function(index, item) {
+    //       ul.append(  
+    //         $(document.createElement('li')).text(item)
+    //       );
+    //     }); 
+    // }
         
     $(current).children('.white-text').removeClass('flow-text');
     $('.main').html(e.currentTarget.innerHTML);

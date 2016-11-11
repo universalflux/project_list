@@ -129,6 +129,7 @@ $('.team-btn').on('click', function (){
       newTeam = $('.' + divName  + '-' + 'team-input').val(),
       mainDiv = $('.container .row .main .itemShow');
 
+    console.log(newTeam);
     if (divName == 'alpha') {
       alpha_teamArr.push(newTeam);
       divID.attr({'team': alpha_teamArr});
