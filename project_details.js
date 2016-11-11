@@ -16,8 +16,7 @@ $('.access-divs').on('click',(e) => {
       mainId  = $('.main').attr('id'),
       current = e.currentTarget,
       items   = $('#' + mainId).attr(divId);
-
-  console.log($('#alpha').attr('media'));
+      
   $(current).children('.white-text').removeClass('flow-text');
   $('.main').html(e.currentTarget.innerHTML);
   $(current).children('.white-text').addClass('flow-text');

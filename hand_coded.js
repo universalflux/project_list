@@ -122,7 +122,8 @@ $('.team-btn').on('click', function (){
   var dropDiv = $(this).parent().attr('class'),
       divName = dropDiv.slice(0,-4),
       divID   = $('#' + divName),
-      newTeam = $('.' + divName  + '-' + 'team-input').val();
+      newTeam = $('.' + divName  + '-' + 'team-input').val(),
+      mainDiv = $('.container .row .main .itemShow');
 
     if (divName == 'alpha') {
       alpha_teamArr.push(newTeam);
@@ -146,16 +147,17 @@ $('.team-btn').on('click', function (){
 
     // if ($('.container .row .main').children().length < 2 ) {
     //   $('.container .row .main').append('<div class="itemShow"></div>') 
-    // }; 
-  $('.container .row .main .itemShow').html(divID.attr('team'));
+    // };    
+    mainDiv.html(divID.attr('team'));
 });
 
 // Add Media
 $('.media-btn').on('click', function (){
-  var dropDiv = $(this).parent().attr('class'),
-      divName = dropDiv.slice(0,-4),
-      divID   = $('#' + divName),
-      newMedia = $('.' + divName  + '-' + 'media-input').val();
+  var dropDiv  = $(this).parent().attr('class'),
+      divName  = dropDiv.slice(0,-4),
+      divID    = $('#' + divName),
+      newMedia = $('.' + divName  + '-' + 'media-input').val(),
+      mainDiv  = $('.container .row .main .itemShow');
 
     if (divName == 'alpha') {
       alpha_medArr.push(newMedia);
@@ -176,15 +178,17 @@ $('.media-btn').on('click', function (){
       failsafe_medArr.push(newMedia);
       divID.attr({'media': failsafe_medArr});
     };
-  $('.container .row .main .itemShow').html(divID.attr('media'));
+
+    mainDiv.html(divID.attr('media'));
 });
 
 // Add Summary
 $('.summary-btn').on('click', function (){
-  var dropDiv = $(this).parent().attr('class'),
-      divName = dropDiv.slice(0,-4),
-      divID   = $('#' + divName),
-      newSummary = $('.' + divName  + '-' + 'summary-input').val();
+  var dropDiv    = $(this).parent().attr('class'),
+      divName    = dropDiv.slice(0,-4),
+      divID      = $('#' + divName),
+      newSummary = $('.' + divName  + '-' + 'summary-input').val(),
+      mainDiv    = $('.container .row .main .itemShow');
 
     if (divName == 'alpha') {
       alpha_sumArr.push(newSummary);
@@ -205,16 +209,18 @@ $('.summary-btn').on('click', function (){
       failsafe_sumArr.push(newSummary);
       divID.attr({'summary': failsafe_sumArr});
     };
-  $('.container .row .main .itemShow').html(divID.attr('summary'));
+
+  mainDiv.html(divID.attr('summary'));
 });
 
 
 // Add Progress
 $('.progress-btn').on('click', function (){
-  var dropDiv = $(this).parent().attr('class'),
-      divName = dropDiv.slice(0,-4),
-      divID   = $('#' + divName),
-      newProgress = $('.' + divName  + '-' + 'progress-input').val();
+  var dropDiv     = $(this).parent().attr('class'),
+      divName     = dropDiv.slice(0,-4),
+      divID       = $('#' + divName),
+      newProgress = $('.' + divName  + '-' + 'progress-input').val(),
+      mainDiv     = $('.container .row .main .itemShow');
 
     if (divName == 'alpha') {
       alpha_progArr.push(newProgress);
@@ -235,15 +241,17 @@ $('.progress-btn').on('click', function (){
       failsafe_progArr.push(newProgress);
       divID.attr({'progress': failsafe_progArr});
     };
-  $('.container .row .main .itemShow').html(divID.attr('progress'));
+
+  mainDiv.html(divID.attr('progress'));
 });
 
 // Add Tests
 $('.tests-btn').on('click', function (){
-  var dropDiv = $(this).parent().attr('class'),
-      divName = dropDiv.slice(0,-4),
-      divID   = $('#' + divName),
-      newTests = $('.' + divName  + '-' + 'tests-input').val();
+  var dropDiv  = $(this).parent().attr('class'),
+      divName  = dropDiv.slice(0,-4),
+      divID    = $('#' + divName),
+      newTests = $('.' + divName  + '-' + 'tests-input').val(),
+      mainDiv  = $('.container .row .main .itemShow');
 
     if (divName == 'alpha') {
       alpha_testArr.push(newTests);
@@ -264,7 +272,8 @@ $('.tests-btn').on('click', function (){
       failsafe_testArr.push(newTests);
       divID.attr({'tests': failsafe_testArr});
     };
-  $('.container .row .main .itemShow').html(divID.attr('tests'));
+    
+  mainDiv.html(divID.attr('tests'));
 });
 
 
