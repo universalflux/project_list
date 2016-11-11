@@ -23,15 +23,11 @@ $(document).ready(() => {
         items   = $('#' + mainId).attr(divId);
 
     function listObj (jsonArr) {
-      var ul = $('<ul>').appendTo('.itemShow');
       var json = { objects: ['item 1', 'item 2', 'item 3'] },
       arr = jsonArr.split(',');
 
         $(arr).each(function(index, object) {
-          ul.append(  
-            $(document.createElement('li'))
-              .append($(document.createElement('p')).text(object))
-          );
+          $('.itemShow').append(($(document.createElement('p')).text(object)));
         }); 
     }
        
