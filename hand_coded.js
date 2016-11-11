@@ -110,7 +110,7 @@ let createNew = (data) => {
   let projectName = data.name + 'Nhc';
   let newDiv;
   newDiv += "<div id = '" + data.name.slice(0, ' ').toLowerCase() + "' class = 'col s12 m6 l3 blue darken-4 push-right z-depth-3 top-divs float'>";
-  newDiv += '<h1 class = "zero-marg white-text center">'+ data.name ' </h1>';
+  newDiv += '<h1 class = "zero-marg white-text center">' + data.name + ' </h1>';
   newDiv += '</div>';
   $('#flashyContent').append(newDiv);
 };
@@ -122,8 +122,7 @@ $('.team-btn').on('click', function (){
   var dropDiv = $(this).parent().attr('class'),
       divName = dropDiv.slice(0,-4),
       divID   = $('#' + divName),
-      newTeam = $('.' + divName  + '-' + 'team-input').val(),
-      items   = divID.attr('team');
+      newTeam = $('.' + divName  + '-' + 'team-input').val();
 
     if (divName == 'alpha') {
       alpha_teamArr.push(newTeam);
@@ -147,6 +146,38 @@ $('.team-btn').on('click', function (){
     // }; 
   $('.container .row .main .itemShow').html(divID.attr('team'));
 });
+
+// Add Media
+$('.media-btn').on('click', function (){
+  var dropDiv = $(this).parent().attr('class'),
+      divName = dropDiv.slice(0,-4),
+      divID   = $('#' + divName),
+      newTeam = $('.' + divName  + '-' + 'media-input').val();
+
+    if (divName == 'alpha') {
+      alpha_medArr.push(newTeam);
+      divID.attr({'media': alpha_medArr});
+    } else if (divName == 'beta') {
+      beta_medArr.push(newTeam);
+      divID.attr({'media': beta_medArr});
+    } else if (divName == 'cali') {
+      cali_medArr.push(newTeam);
+      divID.attr({'media': cali_medArr});
+    } else if (divName == 'darwin') {
+      darwin_medArr.push(newTeam);
+      divID.attr({'media': darwin_medArr});
+    } else if (divName == 'failsafe') {
+      failsafe_medArr.push(newTeam);
+      divID.attr({'media': failsafe_medArr});
+    };
+
+    // if ($('.container .row .main').children().length < 2 ) {
+    //   $('.container .row .main').append('<div class="itemShow"></div>') 
+    // }; 
+  $('.container .row .main .itemShow').html(divID.attr('media'));
+});
+
+
 
 // (function floaty(){
 //   $('.float').animate({bottom: '+=3px'},900, function(){

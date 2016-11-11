@@ -9,7 +9,7 @@ body {
   height: 150px;
   overflow: hidden;
   display: none;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .main {
@@ -19,7 +19,7 @@ body {
   margin-right: 120px;
   display: none;
   position: relative;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .float {
@@ -197,12 +197,12 @@ body {
 .push-right {
   margin-right: 100px;
   margin-bottom: 0px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .push-right-last {
   margin-right: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .top-divs {
@@ -223,7 +223,9 @@ body {
   overflow: hidden;
 }
 
-
+li.blue.darken-1, li.blue.darken-2, li.blue.darken-3, li.blue.darken-4, li.blue.darken-5 {
+  border-radius: 5px;
+}
 .center-top {
   margin-top: 60px;
 }
@@ -319,6 +321,22 @@ ul > li > h5 {
   background-color: transparent;
 }
 
+
+.input-field .btn {
+  width: 50px;
+  height: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 10px;
+
+}
+
+.input-field input {
+  width: 80%;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
 .plus-icon {
   float: right;
 }
@@ -340,7 +358,7 @@ ul > li > h5 {
   text-shadow: 0 0 5px #ff0000;
 }
 
-#beta-one:hover, #darwin-three:hover, #failsafe-five:hover {
+#beta:hover, #darwin:hover, #failsafe:hover {
   text-shadow: 0 0 5px #5DFC0A;
 }
 
