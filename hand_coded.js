@@ -301,8 +301,29 @@ $('.tests-btn').on('click', function (){
   // (incoming, projects) => {
   //   let projectName = incoming;
 
-$('.slideout-item').hide();  
+$('.slideout-item').hide(); 
 
+$('.hamburger').on('click', function () {
+  $(this).toggleClass('is-active');
+});
+
+$('.container').on('click', function () {
+  if($('.hamburger').hasClass('is-active')) {
+    $('.hamburger').removeClass('is-active');
+  };
+});
+
+$('.drag-target').on('click', function () {
+  if($('.hamburger').hasClass('is-active')) {
+    $('.hamburger').removeClass('is-active');
+  };
+});
+
+$('#sidenav-overlay').on('click', function () {
+  if($('.hamburger').hasClass('is-active')) {
+    $('.hamburger').removeClass('is-active');
+  };
+});
 $('.top-divs, .bottom-divs, .nav-link').on('click', (e) => {
   let selectedDiv = e.currentTarget;
   let currentDiv  = $('#' + selectedDiv.id);

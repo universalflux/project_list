@@ -180,8 +180,8 @@ body {
   z-index: 1;
 }
 .corner-circle {
-  width: 110px;
-  height: 110px;
+  width: 75px;
+  height: 75px;
   padding-top: 10px;
   position: absolute;
   margin:none;
@@ -362,7 +362,9 @@ ul > li > h5 {
   text-shadow: 0 0 5px #5DFC0A;
 }
 
-
+.hamburger:focus {
+  background-color: transparent !important;
+}
 
 
 
