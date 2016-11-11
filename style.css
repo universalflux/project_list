@@ -370,5 +370,7 @@ ul > li > h5 {
   background-color: transparent !important;
 }
 
-
+.itemShow, .main {
+  text-shadow: none;
+}
 

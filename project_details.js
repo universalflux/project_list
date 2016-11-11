@@ -22,23 +22,25 @@ $(document).ready(() => {
         current = e.currentTarget,
         items   = $('#' + mainId).attr(divId);
 
-    // function listObj () {
-    //   var ul = $('<ul>').appendTo('.itemShow');
-    //   var json = { items: ['item 1', 'item 2', 'item 3'] };
-      
-    //     $(json.items).each(function(index, item) {
-    //       ul.append(  
-    //         $(document.createElement('li')).text(item)
-    //       );
-    //     }); 
-    // }
-        
+    function listObj (jsonArr) {
+      var ul = $('<ul>').appendTo('.itemShow');
+      var json = { objects: ['item 1', 'item 2', 'item 3'] },
+      arr = jsonArr.split(',');
+
+        $(arr).each(function(index, object) {
+          ul.append(  
+            $(document.createElement('li'))
+              .append($(document.createElement('p')).text(object))
+          );
+        }); 
+    }
+       
     $(current).children('.white-text').removeClass('flow-text');
     $('.main').html(e.currentTarget.innerHTML);
     $(current).children('.white-text').addClass('flow-text');
     $('.main').append('<div class="itemShow"></div>')
-    // listObj();
-    $('.itemShow').html(items);
+    listObj(items);
+    // $('.itemShow').html(items);
 
   });
   $('.main').fadeIn(1000);
