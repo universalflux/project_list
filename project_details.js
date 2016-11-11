@@ -37,8 +37,8 @@ $(document).ready(() => {
     $('.main').html(e.currentTarget.innerHTML);
     $(current).children('.white-text').addClass('flow-text');
     $('.main').append('<div class="itemShow"></div>')
-    listObj();
-    // $('.itemShow').html(items);
+    // listObj();
+    $('.itemShow').html(items);
 
   });
   $('.main').fadeIn(1000);
