@@ -152,22 +152,22 @@ $('.media-btn').on('click', function (){
   var dropDiv = $(this).parent().attr('class'),
       divName = dropDiv.slice(0,-4),
       divID   = $('#' + divName),
-      newTeam = $('.' + divName  + '-' + 'media-input').val();
+      newMedia = $('.' + divName  + '-' + 'media-input').val();
 
     if (divName == 'alpha') {
-      alpha_medArr.push(newTeam);
+      alpha_medArr.push(newMedia);
       divID.attr({'media': alpha_medArr});
     } else if (divName == 'beta') {
-      beta_medArr.push(newTeam);
+      beta_medArr.push(newMedia);
       divID.attr({'media': beta_medArr});
     } else if (divName == 'cali') {
-      cali_medArr.push(newTeam);
+      cali_medArr.push(newMedia);
       divID.attr({'media': cali_medArr});
     } else if (divName == 'darwin') {
-      darwin_medArr.push(newTeam);
+      darwin_medArr.push(newMedia);
       divID.attr({'media': darwin_medArr});
     } else if (divName == 'failsafe') {
-      failsafe_medArr.push(newTeam);
+      failsafe_medArr.push(newMedia);
       divID.attr({'media': failsafe_medArr});
     };
 
@@ -208,6 +208,10 @@ $('.top-divs, .bottom-divs, .nav-link').on('click', (e) => {
   let selectedDiv = e.currentTarget;
   let currentDiv  = $('#' + selectedDiv.id);
   let selectedTeam = currentDiv.attr('team');
+  let selectedMedia = currentDiv.attr('media');
+  let selectedSummary = currentDiv.attr('summary');
+  let selectedProgress = currentDiv.attr('progress');
+  let selectedTests = currentDiv.attr('tests');
   $.ajax({
      type: 'GET',
      url: '/project_details',
@@ -221,6 +225,10 @@ $('.top-divs, .bottom-divs, .nav-link').on('click', (e) => {
      // console.log("Success" + result);
      obtained.html(result);
      $('#put-here').attr('team', selectedTeam);
+     $('#put-here').attr('media', selectedMedia);
+     $('#put-here').attr('summary', selectedSummary);
+     $('#put-here').attr('progress', selectedProgress);
+     $('#put-here').attr('tests', selectedTests);
      $('#put-here').html(selectedDiv.innerHTML);
      $('#put-here').attr('id', selectedDiv.id);
     //  currentDiv.addClass('float');
