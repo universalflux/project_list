@@ -110,7 +110,11 @@ let createNew = (data) => {
   let projectName = data.name + 'Nhc';
   let newDiv;
   newDiv += "<div id = '" + data.name.slice(0, ' ').toLowerCase() + "' class = 'col s12 m6 l3 blue darken-4 push-right z-depth-3 top-divs float'>";
+
+  newDiv += '<h1 class = "zero-marg white-text center">'+ data.name + ' </h1>';
+
   newDiv += '<h1 class = "zero-marg white-text center">' + data.name + ' </h1>';
+
   newDiv += '</div>';
   $('#flashyContent').append(newDiv);
 };
@@ -146,8 +150,8 @@ $('.team-btn').on('click', function (){
     };
 
     // if ($('.container .row .main').children().length < 2 ) {
-    //   $('.container .row .main').append('<div class="itemShow"></div>') 
-    // };    
+    //   $('.container .row .main').append('<div class="itemShow"></div>')
+    // };
     mainDiv.html(divID.attr('team'));
 });
 
@@ -173,7 +177,7 @@ $('.media-btn').on('click', function (){
       divID.attr({'media': darwin_medArr});
     } else if (divName == 'enigma') {
       engima_teamArr.push(newMedia);
-      divID.attr({'media': enigma_medArr});      
+      divID.attr({'media': enigma_medArr});
     } else if (divName == 'failsafe') {
       failsafe_medArr.push(newMedia);
       divID.attr({'media': failsafe_medArr});
@@ -204,7 +208,7 @@ $('.summary-btn').on('click', function (){
       divID.attr({'summary': darwin_sumArr});
     } else if (divName == 'enigma') {
       enigma_sumArr.push(newSummary);
-      divID.attr({'summary': enigma_sumArr});      
+      divID.attr({'summary': enigma_sumArr});
     } else if (divName == 'failsafe') {
       failsafe_sumArr.push(newSummary);
       divID.attr({'summary': failsafe_sumArr});
@@ -267,12 +271,12 @@ $('.tests-btn').on('click', function (){
       divID.attr({'tests': darwin_testArr});
     } else if (divName == 'enigma') {
       enigma_testArr.push(newTests);
-      divID.attr({'tests': enigma_testArr});      
+      divID.attr({'tests': enigma_testArr});
     } else if (divName == 'failsafe') {
       failsafe_testArr.push(newTests);
       divID.attr({'tests': failsafe_testArr});
     };
-    
+
   mainDiv.html(divID.attr('tests'));
 });
 
@@ -300,6 +304,7 @@ $('.tests-btn').on('click', function (){
   /* javascript goes here temporarily */
   // (incoming, projects) => {
   //   let projectName = incoming;
+
 
 $('.slideout-item').hide(); 
 
