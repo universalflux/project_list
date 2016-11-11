@@ -82,7 +82,7 @@ let createNew = (data) => {
   let projectName = data.name + 'Nhc';
   let newDiv;
   newDiv += "<div id = '" + data.name.slice(0, ' ').toLowerCase() + "' class = 'col s12 m6 l3 blue darken-4 push-right z-depth-3 top-divs float'>";
-  newDiv += '<h1 class = "zero-marg white-text center">'+ data.name ' </h1>';
+  newDiv += '<h1 class = "zero-marg white-text center">'+ data.name + ' </h1>';
   newDiv += '</div>';
   $('#flashyContent').append(newDiv);
 };
