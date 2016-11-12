@@ -82,3 +82,50 @@
   -webkit-animation: floatMain 2s infinite;
   transition-timing-function: ease-in-out;
 }
+
+.overlay {
+  background-color: purple;
+  opacity: 0.5;
+  width: inherit;
+  height:inherit;
+  z-index: 1000;
+  margin-left: -11px;
+  padding: 0 0 0 0;
+  margin-top: -200px;
+  float: top;
+}
+
+.overlay-two {
+  width: 500;
+  height: 500;
+  z-index: 1001;
+  padding: 0 0 0 0;
+  float: top;
+}
+
+.main > h1 {
+  margin: 0 0 -70px 0;
+  padding: 0 0 0 0;
+  z-index: 9999;
+  position: relative;
+}
+
+.item-show {
+  display: none;
+  background-color: transparent;
+  z-index: 9999;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin-top: 100px;
+}
+
+.item-show > p {
+  background-color: transparent;
+  position: relative;
+  z-index: 9999;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  font-family:
+}

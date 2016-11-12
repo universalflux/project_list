@@ -10,6 +10,8 @@ body {
   margin: 0 auto 0 auto;
 }
 
+
+
 .container {
   margin: 0 auto 0 auto;
   padding-left: 55px;
@@ -34,6 +36,8 @@ body {
   display: none;
   position: relative;
   border-radius: 10px;
+  overflow: hidden;
+  z-index: 4000;
 }
 
 .detail-items {
@@ -204,6 +208,19 @@ body {
   position: absolute;
   margin:none;
   padding:none;
+  z-index: 1000;
+}
+
+.corner-circle-home {
+  background-image: url('http://www.visualgoodness.com/webroot/images/global/icons/icon-home.png');
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 75px;
+  height: 75px;
+  position: relative;
+  margin-left: 100px;
+  padding: 0 0 0 0;
   z-index: 1000;
 }
 
@@ -414,11 +431,12 @@ ul > li > h5 {
   text-shadow: none !important;
 }
 
-<<<<<<< HEAD
+
 #team {
   background-image: url('http://www.jencoinc.com/wp-content/uploads/2015/07/Team-large.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  margin-top: 150px;
 }
 
 #summary {
@@ -443,7 +461,9 @@ ul > li > h5 {
   background-image: url('https://aos.iacpublishinglabs.com/question/aq/1400px-788px/statistics-on-media-influence_afbcd1fa-dee5-4703-a836-de4dde159043.jpg?domain=cx.aos.ask.com');
   background-size: cover;
   background-repeat: no-repeat;
+  margin-top: 150px;
 }
-=======
 
->>>>>>> 427814ab50f9e675ca8363b839515c0882601b0f
+.bottom-container {
+  padding-left: 90px;
+}
