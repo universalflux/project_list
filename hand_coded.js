@@ -121,6 +121,15 @@ let createNew = (data) => {
 
 // Sidenav Functions
 
+// Turns DOM attribute into JSON array
+  function listObj (jsonArr) {
+      var arr = jsonArr.split(',');
+
+        $(arr).each(function(index, object) {
+          $('.itemShow').append(($(document.createElement('p')).text(object)));
+        }); 
+    }
+
 // Add Team
 $('.team-btn').on('click', function (){
   var dropDiv = $(this).parent().attr('class'),
@@ -152,7 +161,8 @@ $('.team-btn').on('click', function (){
     // if ($('.container .row .main').children().length < 2 ) {
     //   $('.container .row .main').append('<div class="itemShow"></div>')
     // };
-    mainDiv.html(divID.attr('team'));
+
+    listObj(newTeam);
 });
 
 // Add Media
@@ -183,7 +193,7 @@ $('.media-btn').on('click', function (){
       divID.attr({'media': failsafe_medArr});
     };
 
-    mainDiv.html(divID.attr('media'));
+    listObj(newMedia);
 });
 
 // Add Summary
@@ -214,7 +224,7 @@ $('.summary-btn').on('click', function (){
       divID.attr({'summary': failsafe_sumArr});
     };
 
-  mainDiv.html(divID.attr('summary'));
+    listObj(newSummary);  
 });
 
 
@@ -246,7 +256,7 @@ $('.progress-btn').on('click', function (){
       divID.attr({'progress': failsafe_progArr});
     };
 
-  mainDiv.html(divID.attr('progress'));
+    listObj(newProgress);
 });
 
 // Add Tests
@@ -277,7 +287,7 @@ $('.tests-btn').on('click', function (){
       divID.attr({'tests': failsafe_testArr});
     };
 
-  mainDiv.html(divID.attr('tests'));
+    listObj(newTests);
 });
 
 
@@ -305,8 +315,30 @@ $('.tests-btn').on('click', function (){
   // (incoming, projects) => {
   //   let projectName = incoming;
 
-$('.slideout-item').hide();
 
+$('.slideout-item').hide(); 
+
+$('.hamburger').on('click', function () {
+  $(this).toggleClass('is-active');
+});
+
+$('.container').on('click', function () {
+  if($('.hamburger').hasClass('is-active')) {
+    $('.hamburger').removeClass('is-active');
+  };
+});
+
+$('.drag-target').on('click', function () {
+  if($('.hamburger').hasClass('is-active')) {
+    $('.hamburger').removeClass('is-active');
+  };
+});
+
+$('#sidenav-overlay').on('click', function () {
+  if($('.hamburger').hasClass('is-active')) {
+    $('.hamburger').removeClass('is-active');
+  };
+});
 $('.top-divs, .bottom-divs, .nav-link').on('click', (e) => {
   let selectedDiv = e.currentTarget;
   let currentDiv  = $('#' + selectedDiv.id);

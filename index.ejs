@@ -6,13 +6,20 @@
     <link href="/materialize.css" rel = "stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="/style.css" rel = "stylesheet">
+    <link href="dist/hamburgers.css" rel="stylesheet">
   </head>
   <body class = "grey darken-4">
 
 
   <div class = "top-bar left grey darken-3 z-depth-1">
     <div class = "corner-circle circle center left blue darken-4 z-depth-5">
-    <a href = "#" data-activates = "slide-out" class = "button-collapse"><i class = "top-icon large material-icons white-text text-lighten-1"> playlist_add </i></a>
+    <a href = "#" data-activates = "slide-out" class = "button-collapse">
+      <button class="hamburger hamburger--arrowalt" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>  
+    </a>    
     </div>
     <div id = "title" class ="title center">
     <h3 id = "page-title" class = "white-text title-font center"> Current Projects </h3>
@@ -34,9 +41,9 @@
             <ul class = "input-field" id = "">
               <li>
                 <div class = "alphaDrop">
-                  <input class = "input-data white-text team-input" type = "text" placeholder = "What would you like to add?">
+                  <input class = "input-data white-text alpha-team-input" type = "text" placeholder = "What would you like to add?">
                   <button class="btn waves-effect waves-light team-btn blue">
-                    <i class="material-icons right">send</i>
+                    <i class="material-icons">send</i>
                   </button>
                 </div>
               </li>
