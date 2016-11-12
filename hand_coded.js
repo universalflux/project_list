@@ -3,6 +3,7 @@
 $(document).ready(function(){
 var coolClass = "green-text" + " text-lighten-4";
 let clickCount = 0;
+let clickCountTwo = 0;
 
 // Alpha Arrays
 var alpha_teamArr = [];
@@ -114,21 +115,33 @@ let createNew = (data) => {
   newDiv += '<h1 class = "zero-marg white-text center">'+ data.name + ' </h1>';
 
   newDiv += '<h1 class = "zero-marg white-text center">' + data.name + ' </h1>';
-
   newDiv += '</div>';
   $('#flashyContent').append(newDiv);
 };
 
 // Sidenav Functions
 
-// Turns DOM attribute into JSON array
-  function listObj (jsonArr) {
-      var arr = jsonArr.split(',');
+$('.hamburger').click((e) => {
+  if(clickCountTwo <= 0) {
+  $(e.currentTarget).addClass('is-active');
+  clickCountTwo += 1;
+  return clickCountTwo;
+} else {
+  $(e.currentTarget).removeClass('is-active');
+  clickCountTwo -= 1;
+  e.stopPropagation();
+  return clickCountTwo;
+}
+});
 
-        $(arr).each(function(index, object) {
-          $('.itemShow').append(($(document.createElement('p')).text(object)));
-        }); 
-    }
+
+  $('.reset-burger').hover((e) => {
+    if (clickCountTwo >= 1) {
+    clickCountTwo -= 1;
+    $('.hamburger').removeClass('is-active');
+   }
+   return clickCountTwo;
+});
 
 // Add Team
 $('.team-btn').on('click', function (){
@@ -161,8 +174,7 @@ $('.team-btn').on('click', function (){
     // if ($('.container .row .main').children().length < 2 ) {
     //   $('.container .row .main').append('<div class="itemShow"></div>')
     // };
-
-    listObj(newTeam);
+    mainDiv.html(divID.attr('team'));
 });
 
 // Add Media
@@ -193,7 +205,7 @@ $('.media-btn').on('click', function (){
       divID.attr({'media': failsafe_medArr});
     };
 
-    listObj(newMedia);
+    mainDiv.html(divID.attr('media'));
 });
 
 // Add Summary
@@ -224,7 +236,7 @@ $('.summary-btn').on('click', function (){
       divID.attr({'summary': failsafe_sumArr});
     };
 
-    listObj(newSummary);  
+  mainDiv.html(divID.attr('summary'));
 });
 
 
@@ -256,7 +268,7 @@ $('.progress-btn').on('click', function (){
       divID.attr({'progress': failsafe_progArr});
     };
 
-    listObj(newProgress);
+  mainDiv.html(divID.attr('progress'));
 });
 
 // Add Tests
@@ -287,7 +299,7 @@ $('.tests-btn').on('click', function (){
       divID.attr({'tests': failsafe_testArr});
     };
 
-    listObj(newTests);
+  mainDiv.html(divID.attr('tests'));
 });
 
 
@@ -315,30 +327,8 @@ $('.tests-btn').on('click', function (){
   // (incoming, projects) => {
   //   let projectName = incoming;
 
+$('.slideout-item').hide();
 
-$('.slideout-item').hide(); 
-
-$('.hamburger').on('click', function () {
-  $(this).toggleClass('is-active');
-});
-
-$('.container').on('click', function () {
-  if($('.hamburger').hasClass('is-active')) {
-    $('.hamburger').removeClass('is-active');
-  };
-});
-
-$('.drag-target').on('click', function () {
-  if($('.hamburger').hasClass('is-active')) {
-    $('.hamburger').removeClass('is-active');
-  };
-});
-
-$('#sidenav-overlay').on('click', function () {
-  if($('.hamburger').hasClass('is-active')) {
-    $('.hamburger').removeClass('is-active');
-  };
-});
 $('.top-divs, .bottom-divs, .nav-link').on('click', (e) => {
   let selectedDiv = e.currentTarget;
   let currentDiv  = $('#' + selectedDiv.id);

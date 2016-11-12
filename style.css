@@ -392,3 +392,32 @@ ul > li > h5 {
   text-shadow: none;
 }
 
+#team {
+  background-image: url('http://www.jencoinc.com/wp-content/uploads/2015/07/Team-large.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#summary {
+  background-image: url('http://997waystobeagreatspeaker.com/wp-content/uploads/2009/11/can-i-use-notes-while-speaking.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#progress {
+  background-image: url('https://schoolpupiltracker.com/wp-content/uploads/2016/03/Progress.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#tests {
+  background-image: url('http://834ff4dqetg4q20c469mp613.wpengine.netdna-cdn.com/wp-content/uploads/2012/11/chemical_odor_analysis.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#media {
+  background-image: url('https://aos.iacpublishinglabs.com/question/aq/1400px-788px/statistics-on-media-influence_afbcd1fa-dee5-4703-a836-de4dde159043.jpg?domain=cx.aos.ask.com');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
