@@ -329,6 +329,10 @@ $('.tests-btn').on('click', function (){
 
 $('.slideout-item').hide();
 
+
+$('#dropdown-btn-f').on('click', function () {
+  $('#dropdown-f').append('<div class="dropdown-extend"></div>');
+});
 $('.top-divs, .bottom-divs, .nav-link').on('click', (e) => {
   let selectedDiv = e.currentTarget;
   let currentDiv  = $('#' + selectedDiv.id);
