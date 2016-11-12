@@ -250,6 +250,28 @@ li.blue.darken-1, li.blue.darken-2, li.blue.darken-3, li.blue.darken-4, li.blue.
   /*z-index: 3;*/
 }
 
+#dropdown-c {
+  top: 376px !important;
+}
+
+#dropdown-d {
+  top: 522px !important;
+}
+
+#dropdown-e {
+  top: 668px !important;
+  height: 380px;
+}
+
+#dropdown-f {
+  top: 814px !important;
+  height: 380px;
+}
+
+#slide-out {
+  overflow: auto;
+}
+
 .down-arrow {
   width: 50px;
   height: 50px;
@@ -373,4 +395,5 @@ ul > li > h5 {
 .itemShow, .main {
   text-shadow: none;
 }
+
 
