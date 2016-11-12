@@ -392,8 +392,8 @@ ul > li > h5 {
   background-color: transparent !important;
 }
 
-.itemShow, .main {
-  text-shadow: none;
+.main, .itemShow {
+  text-shadow: none !important;
 }
 
 
