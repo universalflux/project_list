@@ -6,8 +6,8 @@ body {
   margin: 0 auto 0 auto;
 }
 
-.title {
-  margin: 0 auto 0 auto;
+#title {
+  margin-right: 85px;
 }
 
 
@@ -407,6 +407,7 @@ ul > li > h5 {
   font-weight: bold;
   opacity: 0.9;
   font-size: 40px;
+
 }
 
 .itemShow {
