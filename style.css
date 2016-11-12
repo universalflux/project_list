@@ -2,8 +2,22 @@ body {
   background: linear-gradient(to right, #1178FD 10%,#1F6AA4 99%);
 }
 
+.pull-up {
+  margin: 0 auto 0 auto;
+}
+
+.title {
+  margin: 0 auto 0 auto;
+}
+
+.container {
+  margin: 0 auto 0 auto;
+  padding-left: 55px;
+}
+
 .access-divs {
   margin-top: 100px;
+  margin-left: 100px;
 /* Fixes max size for floating divs on the main page. */
   width: 150px;
   height: 150px;
@@ -20,6 +34,10 @@ body {
   display: none;
   position: relative;
   border-radius: 10px;
+}
+
+.detail-items {
+  margin: 0 auto 0 auto;
 }
 
 .float {
