@@ -30,17 +30,16 @@ $(document).ready(function(){
         items   = $('#' + mainId).attr(divId);
 
     function listObj (jsonArr) {
-      if(jsonArr) {
-      var json = { objects: ['item 1', 'item 2', 'item 3'] },
-      arr = jsonArr.split(',');
-
+      if (jsonArr) {
+      var arr = jsonArr.split(',');
+      
         $(arr).each(function(index, object) {
           $('.item-show').append(($(document.createElement('p')).text(object)));
         });
       } else {
         console.log("Array ain't here yet.");
       }
-    }
+    };
 
     $(current).children('.white-text').removeClass('flow-text');
     $('.main').html(e.currentTarget.innerHTML);
