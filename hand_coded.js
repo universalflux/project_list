@@ -106,7 +106,7 @@ let fsFive = {
 
 // Code To Create a New Project Div
 
-let createNew = (data) => {
+let createNew2 = (data) => {
   let projectName = data.name + 'Nhc';
   let newDiv;
   newDiv += "<div id = '" + data.name.slice(0, ' ').toLowerCase() + "' class = 'col s12 m6 l3 blue darken-4 push-right z-depth-3 top-divs float'>";
@@ -116,27 +116,65 @@ let createNew = (data) => {
   newDiv += '<h1 class = "zero-marg white-text center">' + data.name + ' </h1>';
 
   newDiv += '</div>';
-  $('#flashyContent').append(newDiv);
+  $('#flashy-content').append(newDiv);
 };
+
+
+let createNewFloat = (data) => {
+  let projectName = data.name + 'Nhc';
+  let newDiv = "";
+
+  newDiv += "<a href='#'>"
+
+  newDiv += "<div id = " + data.toLowerCase() + "' class = 'col s12 m6 l3 blue darken-4 push-right z-depth-3 top-divs float'>";
+
+  newDiv += '<h1 class = "zero-marg white-text center">'+ data + ' </h1>';
+
+  newDiv += '</div> </a>';
+  $('#flashy-content').append(newDiv);
+};
+
+function hideSix(){
+  var divs     = document.getElementsByClassName("z-depth-3"),
+      arr      = [].slice.call(divs),
+      hideDivs = arr.slice(0,6), 
+      showDivs = arr.slice(6,13);
+      console.log(showDivs);
+
+    if(arr.length > 6) {
+      [].forEach.call(hideDivs, function (hideDiv) {
+        $(hideDiv).addClass('hideDivs');
+      });
+      // [].forEach.call(showDivs, function (showDiv) {
+      //   // $(showDiv).show();
+      // });
+    }
+}
+
+
+$('.add-project-btn').on('click', function (){
+  var newProj = $('.add-project-input').val();
+  createNewFloat(newProj);
+  hideSix();
+});
+
 
 // Sidenav Functions
 
 // Turns DOM attribute into JSON array
-  function listObj (jsonArr) {
-      var arr = jsonArr.split(',');
-
-        $(arr).each(function(index, object) {
-          $('.itemShow').append(($(document.createElement('p')).text(object)));
-        }); 
-    }
+function listObj (jsonArr) {
+    var arr = jsonArr.split(',');
+      $(arr).each(function(index, object) {
+        $('.item-show').append(($(document.createElement('p')).text(object)));
+      }); 
+  }
 
 // Add Team
 $('.team-btn').on('click', function (){
   var dropDiv = $(this).parent().attr('class'),
       divName = dropDiv.slice(0,-4),
       divID   = $('#' + divName),
-      newTeam = $('.' + divName  + '-' + 'team-input').val(),
-      mainDiv = $('.container .row .main .itemShow');
+      newTeam = $('.' + divName  + '-' + 'team-input').val();
 
     if (divName == 'alpha') {
       alpha_teamArr.push(newTeam);
@@ -170,8 +208,7 @@ $('.media-btn').on('click', function (){
   var dropDiv  = $(this).parent().attr('class'),
       divName  = dropDiv.slice(0,-4),
       divID    = $('#' + divName),
-      newMedia = $('.' + divName  + '-' + 'media-input').val(),
-      mainDiv  = $('.container .row .main .itemShow');
+      newMedia = $('.' + divName  + '-' + 'media-input').val();
 
     if (divName == 'alpha') {
       alpha_medArr.push(newMedia);
@@ -201,8 +238,7 @@ $('.summary-btn').on('click', function (){
   var dropDiv    = $(this).parent().attr('class'),
       divName    = dropDiv.slice(0,-4),
       divID      = $('#' + divName),
-      newSummary = $('.' + divName  + '-' + 'summary-input').val(),
-      mainDiv    = $('.container .row .main .itemShow');
+      newSummary = $('.' + divName  + '-' + 'summary-input').val();
 
     if (divName == 'alpha') {
       alpha_sumArr.push(newSummary);
@@ -233,8 +269,7 @@ $('.progress-btn').on('click', function (){
   var dropDiv     = $(this).parent().attr('class'),
       divName     = dropDiv.slice(0,-4),
       divID       = $('#' + divName),
-      newProgress = $('.' + divName  + '-' + 'progress-input').val(),
-      mainDiv     = $('.container .row .main .itemShow');
+      newProgress = $('.' + divName  + '-' + 'progress-input').val();
 
     if (divName == 'alpha') {
       alpha_progArr.push(newProgress);
@@ -264,8 +299,7 @@ $('.tests-btn').on('click', function (){
   var dropDiv  = $(this).parent().attr('class'),
       divName  = dropDiv.slice(0,-4),
       divID    = $('#' + divName),
-      newTests = $('.' + divName  + '-' + 'tests-input').val(),
-      mainDiv  = $('.container .row .main .itemShow');
+      newTests = $('.' + divName  + '-' + 'tests-input').val();
 
     if (divName == 'alpha') {
       alpha_testArr.push(newTests);
