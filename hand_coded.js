@@ -105,33 +105,30 @@ let fsFive = {
 };
 
 // Code To Create a New Project Div
-
-let createNew2 = (data) => {
-  let projectName = data.name + 'Nhc';
-  let newDiv;
-  newDiv += "<div id = '" + data.name.slice(0, ' ').toLowerCase() + "' class = 'col s12 m6 l3 blue darken-4 push-right z-depth-3 top-divs float'>";
-
-  newDiv += '<h1 class = "zero-marg white-text center">'+ data.name + ' </h1>';
-
-  newDiv += '<h1 class = "zero-marg white-text center">' + data.name + ' </h1>';
-
-  newDiv += '</div>';
-  $('#flashy-content').append(newDiv);
-};
-
-
 let createNewFloat = (data) => {
   let projectName = data.name + 'Nhc';
-  let newDiv = "";
+  let newDiv      = "<a href='#'>";
+  let divs        = document.getElementsByClassName("z-depth-3");
+  let arr         = [].slice.call(divs);
 
-  newDiv += "<a href='#'>"
-
-  newDiv += "<div id = " + data.toLowerCase() + "' class = 'col s12 m6 l3 blue darken-4 push-right z-depth-3 top-divs float'>";
+  if (arr.length == 6) { 
+    newDiv += "<div id = " + data.toLowerCase() + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float'>";
+  } else if (arr.length == 7) {  
+    newDiv += "<div id = " + data.toLowerCase() + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float center-top'>";
+  } else if (arr.length == 8) {
+    newDiv += "<div id = " + data.toLowerCase() + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right-last float'>";
+  } else if (arr.length == 9) {
+    newDiv += "<div id = " + data.toLowerCase() + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float'>";
+  } else if (arr.length == 10) {  
+    newDiv += "<div id = " + data.toLowerCase() + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 bottom-divs push-right float center-bottom'>";
+  } else if (arr.length == 11) {
+    newDiv += "<div id = " + data.toLowerCase() + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 bottom-divs push-right-last float'>";
+  }
 
   newDiv += '<h1 class = "zero-marg white-text center">'+ data + ' </h1>';
-
   newDiv += '</div> </a>';
-  $('#flashy-content').append(newDiv);
+    
+  $('#flashy-content .reset-burger').append(newDiv);  
 };
 
 function hideSix(){
@@ -139,11 +136,10 @@ function hideSix(){
       arr      = [].slice.call(divs),
       hideDivs = arr.slice(0,6), 
       showDivs = arr.slice(6,13);
-      console.log(showDivs);
 
     if(arr.length > 6) {
       [].forEach.call(hideDivs, function (hideDiv) {
-        $(hideDiv).addClass('hideDivs');
+        $(hideDiv).hide();
       });
       // [].forEach.call(showDivs, function (showDiv) {
       //   // $(showDiv).show();
