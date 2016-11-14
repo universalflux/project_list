@@ -3,49 +3,9 @@
 $(document).ready(function(){
 var coolClass = "green-text" + " text-lighten-4";
 let clickCount = 0;
+let clickCountTwo = 0;
+let divCount = 0;
 
-// Alpha Arrays
-var alpha_teamArr = [];
-var alpha_medArr = [];
-var alpha_sumArr = [];
-var alpha_progArr = [];
-var alpha_testArr = [];
-
-// Beta Arrays
-var beta_teamArr = [];
-var beta_medArr = [];
-var beta_sumArr = [];
-var beta_progArr = [];
-var beta_testArr = [];
-
-// Cali Arrays
-var cali_teamArr = [];
-var cali_medArr = [];
-var cali_sumArr = [];
-var cali_progArr = [];
-var cali_testArr = [];
-
-//  Darwin Arrays
-var darwin_teamArr = [];
-var darwin_medArr = [];
-var darwin_sumArr = [];
-var darwin_progArr = [];
-var arwin_testArr = [];
-
-
-// Enigma Arrays
-var enigma_teamArr = [];
-var enigma_medArr = [];
-var enigma_sumArr = [];
-var enigma_progArr = [];
-var enigma_testArr = [];
-
-// Failsafe Arrays
-var failsafe_teamArr = [];
-var failsafe_medArr = [];
-var failsafe_sumArr = [];
-var failsafe_progArr = [];
-var failsafe_testArr = [];
 
 
 // Hard Coded Project Objects
@@ -112,6 +72,7 @@ let createNewFloat = (data) => {
   let arr         = [].slice.call(divs);
   let dataID      = data.toLowerCase().replace(/\s+/g, '');
 
+
   if (arr.length == 6) { 
     newDiv += "<div id = " + dataID + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float'>";
   } else if (arr.length == 7) {  
@@ -128,14 +89,40 @@ let createNewFloat = (data) => {
 
   newDiv += '<h1 class = "zero-marg white-text center">'+ data + ' </h1>';
   newDiv += '</div> </a>';
-    
-  $('#flashy-content .reset-burger').append(newDiv);  
+
+  $('#flashy-content .reset-burger').append(newDiv);
+
+  newDiv += '<h1 class = "zero-marg white-text center">' + data.name + ' </h1>';
+  newDiv += '</div>';
+  $('#flashyContent').append(newDiv);
 };
 
+// Sidenav Functions
+
+$('.hamburger').click((e) => {
+  if(clickCountTwo <= 0) {
+  $(e.currentTarget).addClass('is-active');
+  clickCountTwo += 1;
+  return clickCountTwo;
+} else {
+  $(e.currentTarget).removeClass('is-active');
+  clickCountTwo -= 1;
+  return clickCountTwo;
+}
+});
+
+
+  $('.reset-burger').hover((e) => {
+    if (clickCountTwo >= 1) {
+    clickCountTwo -= 1;
+    $('.hamburger').removeClass('is-active');
+   }
+   return clickCountTwo;
+});
 function hideSix(){
   var divs     = document.getElementsByClassName("z-depth-3"),
       arr      = [].slice.call(divs),
-      hideDivs = arr.slice(0,6), 
+      hideDivs = arr.slice(0,6),
       showDivs = arr.slice(6,13);
 
     if(arr.length > 6) {
@@ -160,7 +147,7 @@ function listObj (jsonArr) {
     var arr = jsonArr.split(',');
       $(arr).each(function(index, object) {
         $('.item-show').append(($(document.createElement('p')).text(object)));
-      }); 
+      });
   }
 
 // Add Team
@@ -254,8 +241,11 @@ $('.summary-btn').on('click', function (){
       divID.attr({'summary': failsafe_sumArr});
     };
 
-    listObj(newSummary);  
+    listObj(newSummary);
+
 });
+
+// Add Team
 
 
 // Add Progress
@@ -320,6 +310,7 @@ $('.tests-btn').on('click', function (){
 
 
 
+
 // (function floaty(){
 //   $('.float').animate({bottom: '+=3px'},900, function(){
 //     $('.float').animate({bottom: '-=3px'},900, floaty())
@@ -343,32 +334,12 @@ $('.tests-btn').on('click', function (){
   // (incoming, projects) => {
   //   let projectName = incoming;
 
+$('.slideout-item').hide();
 
-$('.slideout-item').hide(); 
 
-$('.hamburger').on('click', function () {
-  $(this).toggleClass('is-active');
+$('#dropdown-btn-f').on('click', function () {
+  $('#dropdown-f').append('<div class="dropdown-extend"></div>');
 });
-
-$('.container').on('click', function () {
-  if($('.hamburger').hasClass('is-active')) {
-    $('.hamburger').removeClass('is-active');
-  };
-});
-
-$('.drag-target').on('click', function () {
-  if($('.hamburger').hasClass('is-active')) {
-    $('.hamburger').removeClass('is-active');
-  };
-});
-
-$('#sidenav-overlay').on('click', function () {
-  if($('.hamburger').hasClass('is-active')) {
-    $('.hamburger').removeClass('is-active');
-  };
-});
-
-
 $('.top-divs, .bottom-divs, .nav-link').on('click', (e) => {
   let selectedDiv = e.currentTarget;
   let currentDiv  = $('#' + selectedDiv.id);
@@ -396,6 +367,8 @@ $('.top-divs, .bottom-divs, .nav-link').on('click', (e) => {
      $('#put-here').attr('tests', selectedTests);
      $('#put-here').html(selectedDiv.innerHTML);
      $('#put-here').attr('id', selectedDiv.id);
+     $('<a href = ""><div class = "corner-circle-home center circle left purple lighten-1 z-depth-5">  </div></a>')
+     .insertAfter('.corner-circle').hide().fadeIn('slow');
     //  currentDiv.addClass('float');
   },
   error: (err) => {
@@ -438,6 +411,5 @@ $('.top-divs, .bottom-divs, .nav-link').on('click', (e) => {
     .removeClass('green-text', 5000)
     .addClass('white-text', 5000);
   });
-
 
 });
