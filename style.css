@@ -390,8 +390,15 @@ ul > li > h5 {
   height: 30px !important;
   color: grey;
   margin-right: 100px
+  border-radius: 10px;
 }
 
+
+.add-project-input:focus, .add-project-input:hover  {
+  border-bottom: none !important;
+  box-shadow: none !important;
+
+}
 .add-project-input-group{
   display: inline-block;
 }
@@ -402,6 +409,7 @@ ul > li > h5 {
   height: 30px;
   border-radius: 5px;
   padding: 0 2px 8px 2px;
+  margin-left: 5px;
 }
 
 .input-field .btn {

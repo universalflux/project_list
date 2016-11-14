@@ -110,19 +110,20 @@ let createNewFloat = (data) => {
   let newDiv      = "<a href='#'>";
   let divs        = document.getElementsByClassName("z-depth-3");
   let arr         = [].slice.call(divs);
+  let dataID      = data.toLowerCase().replace(/\s+/g, '');
 
   if (arr.length == 6) { 
-    newDiv += "<div id = " + data.toLowerCase() + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float'>";
+    newDiv += "<div id = " + dataID + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float'>";
   } else if (arr.length == 7) {  
-    newDiv += "<div id = " + data.toLowerCase() + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float center-top'>";
+    newDiv += "<div id = " + dataID + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float center-top'>";
   } else if (arr.length == 8) {
-    newDiv += "<div id = " + data.toLowerCase() + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right-last float'>";
+    newDiv += "<div id = " + dataID + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right-last float'>";
   } else if (arr.length == 9) {
-    newDiv += "<div id = " + data.toLowerCase() + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float'>";
+    newDiv += "<div id = " + dataID + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float'>";
   } else if (arr.length == 10) {  
-    newDiv += "<div id = " + data.toLowerCase() + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 bottom-divs push-right float center-bottom'>";
+    newDiv += "<div id = " + dataID + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 bottom-divs push-right float center-bottom'>";
   } else if (arr.length == 11) {
-    newDiv += "<div id = " + data.toLowerCase() + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 bottom-divs push-right-last float'>";
+    newDiv += "<div id = " + dataID + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 bottom-divs push-right-last float'>";
   }
 
   newDiv += '<h1 class = "zero-marg white-text center">'+ data + ' </h1>';
@@ -141,9 +142,6 @@ function hideSix(){
       [].forEach.call(hideDivs, function (hideDiv) {
         $(hideDiv).hide();
       });
-      // [].forEach.call(showDivs, function (showDiv) {
-      //   // $(showDiv).show();
-      // });
     }
 }
 
