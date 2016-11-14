@@ -79,6 +79,7 @@ $(document).ready(function(){
   });
 
   $('.corner-circle-home').click((e) => {
+    $('.corner-circle-home').fadeOut();
   $.ajax({
      type: 'GET',
      url: '/',
