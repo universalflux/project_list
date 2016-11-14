@@ -89,7 +89,7 @@ let createNewFloat = (data) => {
   newDiv += '</div> </a>';
 
   $('#flashy-content .reset-burger').append(newDiv);
-};
+
   newDiv += '<h1 class = "zero-marg white-text center">' + data.name + ' </h1>';
   newDiv += '</div>';
   $('#flashyContent').append(newDiv);
@@ -116,7 +116,7 @@ $('.hamburger').click((e) => {
     $('.hamburger').removeClass('is-active');
    }
    return clickCountTwo;
-
+});
 function hideSix(){
   var divs     = document.getElementsByClassName("z-depth-3"),
       arr      = [].slice.call(divs),
