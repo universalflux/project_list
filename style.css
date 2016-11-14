@@ -447,6 +447,29 @@ ul > li > h5 {
   background-color: transparent;
 }
 
+.add-project {
+  height: 60px;
+  width: 400px;
+}
+
+.add-project-input {
+  width: 60% !important;
+  height: 30px !important;
+  color: grey;
+  margin-right: 100px
+}
+
+.add-project-input-group{
+  display: inline-block;
+}
+
+.add-project-btn {
+  background-color: grey;
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+  padding: 0 2px 8px 2px;
+}
 
 .input-field .btn {
   width: 50px;
@@ -479,7 +502,7 @@ ul > li > h5 {
 
 }
 
-.itemShow {
+.item-show {
   background-color: white;
 }
 
@@ -487,6 +510,10 @@ ul > li > h5 {
   opacity: .7;
   box-shadow: 0 0 20px white;
   text-shadow: 0 0 5px #ff0000;
+}
+
+.hideDivs {
+  display: none;
 }
 
 #beta:hover, #darwin:hover, #failsafe:hover {
@@ -497,7 +524,7 @@ ul > li > h5 {
   background-color: transparent !important;
 }
 
-.main, .itemShow {
+.main, .item-show {
   text-shadow: none !important;
 }
 
