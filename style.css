@@ -27,7 +27,16 @@ body {
   overflow: hidden;
   display: none;
   border-radius: 10px;
- /* text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;*/
+  text-shadow: 1px 1px 0 #000,
+               -1px -1px 0 #000,
+               1px -1px 0 #000,
+               -1px 1px 0 #000,
+               0px 1px 0 #000,
+               1px 0px 0 #000,
+               0px -1px 0 #000,
+               -1px 0px 0 #000,
+               4px 4px 3px #000;
+
 }
 
 .main {
@@ -327,6 +336,15 @@ body {
     /*margin-top: 300px;*/
     margin-left: 10px;
     position: relative;
+    text-shadow: 1px 1px 0 #000,
+                 -1px -1px 0 #000,
+                 1px -1px 0 #000,
+                 -1px 1px 0 #000,
+                 0px 1px 0 #000,
+                 1px 0px 0 #000,
+                 0px -1px 0 #000,
+                 -1px 0px 0 #000,
+                 4px 4px 3px #000;
   /* Fixes max size for floating divs on the main page. */
     /*width: 150px;
     height: 150px;*/
@@ -334,7 +352,7 @@ body {
     position: relative;*/
     /*display: none;
     border-radius: 10px;*/
-   /* text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;*/
+  /*  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;*/
   }
 
   .bottom-container {
