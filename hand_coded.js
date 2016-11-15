@@ -128,11 +128,10 @@ let createNewFloat = (data) => {
   } else if (arr.length == 11) {
     newDiv += "<div id = '" + dataID + "'class = 'col s12 m6 l3 blue darken-4 z-depth-3 bottom-divs push-right-last float'>";
   }
-
-  newDiv += '<h1 class = "zero-marg white-text center">'+ data + ' </h1>';
-  newDiv += '</div> </a>';
-
+    newDiv += '<h1 class = "zero-marg white-text center">'+ data + ' </h1>';
+    newDiv += '</div> </a>';
   $('#flashy-content .reset-burger').append(newDiv);
+
 };
 
 // Sidenav Functions
