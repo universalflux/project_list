@@ -115,24 +115,24 @@ let createNewFloat = (data) => {
   let dataID      = data.toLowerCase().replace(/\s+/g, '');
 
 
-  if (arr.length == 6) { 
-    newDiv += "<div id = " + dataID + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float'>";
-  } else if (arr.length == 7) {  
-    newDiv += "<div id = " + dataID + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float center-top'>";
+  if (arr.length == 6) {
+    newDiv += "<div id = '" + dataID + "'class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float'>";
+  } else if (arr.length == 7) {
+    newDiv += "<div id = '" + dataID + "'class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float center-top'>";
   } else if (arr.length == 8) {
-    newDiv += "<div id = " + dataID + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right-last float'>";
+    newDiv += "<div id = '" + dataID + "'class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right-last float'>";
   } else if (arr.length == 9) {
-    newDiv += "<div id = " + dataID + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float'>";
-  } else if (arr.length == 10) {  
-    newDiv += "<div id = " + dataID + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 bottom-divs push-right float center-bottom'>";
+    newDiv += "<div id = '" + dataID + "'class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float'>";
+  } else if (arr.length == 10) {
+    newDiv += "<div id = '" + dataID + "'class = 'col s12 m6 l3 blue darken-4 z-depth-3 bottom-divs push-right float center-bottom'>";
   } else if (arr.length == 11) {
-    newDiv += "<div id = " + dataID + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 bottom-divs push-right-last float'>";
+    newDiv += "<div id = '" + dataID + "'class = 'col s12 m6 l3 blue darken-4 z-depth-3 bottom-divs push-right-last float'>";
   }
 
   newDiv += '<h1 class = "zero-marg white-text center">'+ data + ' </h1>';
   newDiv += '</div> </a>';
 
-  $('#flashy-content .reset-burger').append(newDiv); 
+  $('#flashy-content .reset-burger').append(newDiv);
 };
 
 // Sidenav Functions
@@ -168,16 +168,23 @@ function pageOne () {
   [].forEach.call(page2s, function (page2) {
     $(page2).hide();
   });
-  
+
   [].forEach.call(page1s, function (page1) {
     $(page1).show();
-  });  
+  });
 
   if(arr.length >= 7) {
+    if($('.corner-circle-forward').length >= 0) {
+    $('.corner-circle-forward').remove();
     $('<a href = ""><div id="PageOne" class = "corner-circle-forward center circle left green z-depth-5">  </div></a>')
       .insertAfter('.corner-circle')
       .fadeIn('slow');
-  }; 
+    } else {
+    $('<a href = ""><div id="PageOne" class = "corner-circle-forward center circle left green z-depth-5">  </div></a>')
+      .insertAfter('.corner-circle')
+      .fadeIn('slow');
+  };
+}
 }
 
 function pageTwo () {
@@ -189,12 +196,13 @@ function pageTwo () {
   [].forEach.call(page1s, function (page1) {
     $(page1).hide();
   });
-  
+
   [].forEach.call(page2s, function (page2) {
     $(page2).show();
-  });  
+  });
 
-  if(arr.length >= 7 && !$('.corner-circle-home').length) {
+  if(arr.length >= 7 && $('.corner-circle-home').length <= 0) {
+
     $('<a href = "#"><div id="pageOne" class = "corner-circle-home center circle left purple lighten-1 z-depth-5">  </div></a>')
       .insertAfter('.corner-circle')
       .fadeIn('slow');
@@ -214,7 +222,7 @@ function hideSix(){
 
   $('.corner-circle-forward').remove();
 
-  if(arr.length >= 7 && !$('.corner-circle-home').length) {
+  if(arr.length >= 7 && $('.corner-circle-home').length <= 0) {
     $('<a href = "#"><div class = "corner-circle-home center circle left green z-depth-5">  </div></a>')
       .insertAfter('.corner-circle')
       .fadeIn('slow');
@@ -224,9 +232,17 @@ function hideSix(){
 
 $('.add-project-btn').on('click', function (){
   var newProj = $('.add-project-input').val();
-  
+
   createNewFloat(newProj);
   hideSix();
+
+$('#hand-coded').attr('id', 'destroyed');
+  removeIt = document.getElementById('destroyed');
+  let script = document.createElement('script');
+  script.src = '/hand_coded.js';
+  script.id = 'hand-coded';
+  document.body.appendChild(script);
+  $(document).remove(removeIt);
 });
 
 $('.top-bar').on('click', '#pageOne', function (e){
@@ -441,6 +457,7 @@ $('.slideout-item').hide();
 
 $('.top-divs, .bottom-divs, .nav-link').on('click', (e) => {
   let selectedDiv = e.currentTarget;
+  console.log(e.currentTarget);
   let currentDiv  = $('#' + selectedDiv.id);
   let selectedTeam = currentDiv.attr('team');
   let selectedMedia = currentDiv.attr('media');
@@ -466,10 +483,19 @@ $('.top-divs, .bottom-divs, .nav-link').on('click', (e) => {
      $('#put-here').attr('tests', selectedTests);
      $('#put-here').html(selectedDiv.innerHTML);
      $('#put-here').attr('id', selectedDiv.id);
+     if($('.corner-circle-home').length >=1) {
+       console.log("Corner circle home is already here.");
+       $('.corner-circle-home').remove();
+       $('<a href = ""><div class = "corner-circle-home center circle left purple lighten-1 z-depth-5">  </div></a>')
+       .insertAfter('.corner-circle');
+       $('.corner-circle-forward').remove();
+     } else {
      $('<a href = ""><div class = "corner-circle-home center circle left purple lighten-1 z-depth-5">  </div></a>')
       .insertAfter('.corner-circle').hide().fadeIn('slow');
+      console.log('I did this, in the success function');
      $('.corner-circle-forward').remove();
     //  currentDiv.addClass('float');
+  }
   },
   error: (err) => {
     console.log("err" + JSON.stringify(err));

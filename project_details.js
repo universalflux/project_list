@@ -117,6 +117,7 @@ $(document).ready(function(){
 
   $('.corner-circle-home').click((e) => {
     $('.corner-circle-home').fadeOut();
+    console.log("Got it!");
   $.ajax({
      type: 'GET',
      url: '/',
