@@ -27,7 +27,16 @@ body {
   overflow: hidden;
   display: none;
   border-radius: 10px;
- /* text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;*/
+  text-shadow: 1px 1px 0 #000,
+               -1px -1px 0 #000,
+               1px -1px 0 #000,
+               -1px 1px 0 #000,
+               0px 1px 0 #000,
+               1px 0px 0 #000,
+               0px -1px 0 #000,
+               -1px 0px 0 #000,
+               4px 4px 3px #000;
+
 }
 
 .main {
@@ -230,6 +239,42 @@ body {
   opacity: 0.8;
 }
 
+
+.corner-circle-back {
+  background-image: url('https://www.materialui.co/materialIcons/av/fast_rewind_grey_192x192.png');
+  background-size: 60px 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 75px;
+  height: 75px;
+  position: relative;
+  margin-left: 100px;
+  padding: 0 0 0 0;
+  z-index: 1000;
+}
+
+.corner-circle-back:hover {
+  opacity: 0.8;
+}
+
+.corner-circle-forward {
+  background-image: url('https://www.materialui.co/materialIcons/av/fast_forward_grey_144x144.png');
+  background-size: 60px 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 75px;
+  height: 75px;
+  position: relative;
+  margin-left: 100px;
+  padding: 0 0 0 0;
+  z-index: 1000;
+}
+
+.corner-circle-forward:hover {
+  opacity: 0.8;
+}
+
+
 .zero-marg {
   margin-top: 0;
   padding: none;
@@ -361,7 +406,26 @@ body {
     position: relative;
     display: none;*/
     border-radius: 10px;
-   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+
+    position: relative;
+    text-shadow: 1px 1px 0 #000,
+                 -1px -1px 0 #000,
+                 1px -1px 0 #000,
+                 -1px 1px 0 #000,
+                 0px 1px 0 #000,
+                 1px 0px 0 #000,
+                 0px -1px 0 #000,
+                 -1px 0px 0 #000,
+                 4px 4px 3px #000;
+  /* Fixes max size for floating divs on the main page. */
+    /*width: 150px;
+    height: 150px;*/
+    /*overflow: hidden;
+    position: relative;*/
+    /*display: none;
+    border-radius: 10px;*/
+  /*  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;*/
+
   }
 
   .bottom-container {
@@ -425,21 +489,21 @@ li.blue.darken-1, li.blue.darken-2, li.blue.darken-3, li.blue.darken-4, li.blue.
 }
 
 #dropdown-c {
-  top: 376px !important;
+  top: 434px !important;
 }
 
 #dropdown-d {
-  top: 522px !important;
+  top: 578px !important;
   height: 450px;
 }
 
 #dropdown-e {
-  top: 668px !important;
+  top: 722px !important;
   height: 450px;
 }
 
 #dropdown-f {
-  top: 814px !important;
+  top: 866px !important;
   height: 450px;
 }
 
@@ -528,8 +592,15 @@ ul > li > h5 {
   height: 30px !important;
   color: grey;
   margin-right: 100px
+  border-radius: 10px;
 }
 
+
+.add-project-input:focus, .add-project-input:hover  {
+  border-bottom: none !important;
+  box-shadow: none !important;
+
+}
 .add-project-input-group{
   display: inline-block;
 }
@@ -540,6 +611,7 @@ ul > li > h5 {
   height: 30px;
   border-radius: 5px;
   padding: 0 2px 8px 2px;
+  margin-left: 5px;
 }
 
 .input-field .btn {

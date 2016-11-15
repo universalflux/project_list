@@ -87,7 +87,6 @@ $(document).ready(function(){
     $('.item-show').show();
     // $('.itemShow').html(items);
 
-
   });
 
   $('.button-collapse').click((e) => {
