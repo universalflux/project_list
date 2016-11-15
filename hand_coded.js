@@ -115,24 +115,26 @@ let createNewFloat = (data) => {
   let dataID      = data.toLowerCase().replace(/\s+/g, '');
 
 
-  if (arr.length == 6) { 
-    newDiv += "<div id = " + dataID + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float'>";
-  } else if (arr.length == 7) {  
-    newDiv += "<div id = " + dataID + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float center-top'>";
-  } else if (arr.length == 8) {
-    newDiv += "<div id = " + dataID + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right-last float'>";
-  } else if (arr.length == 9) {
-    newDiv += "<div id = " + dataID + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float'>";
-  } else if (arr.length == 10) {  
-    newDiv += "<div id = " + dataID + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 bottom-divs push-right float center-bottom'>";
-  } else if (arr.length == 11) {
-    newDiv += "<div id = " + dataID + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 bottom-divs push-right-last float'>";
-  }
+  if(arr.length < 12) {
+    if (arr.length == 6) { 
+      newDiv += "<div id = " + dataID + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float'>";
+    } else if (arr.length == 7) {  
+      newDiv += "<div id = " + dataID + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float center-top'>";
+    } else if (arr.length == 8) {
+      newDiv += "<div id = " + dataID + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right-last float'>";
+    } else if (arr.length == 9) {
+      newDiv += "<div id = " + dataID + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float'>";
+    } else if (arr.length == 10) {  
+      newDiv += "<div id = " + dataID + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 bottom-divs push-right float center-bottom'>";
+    } else if (arr.length == 11) {
+      newDiv += "<div id = " + dataID + "' class = 'col s12 m6 l3 blue darken-4 z-depth-3 bottom-divs push-right-last float'>";
+    }
 
-  newDiv += '<h1 class = "zero-marg white-text center">'+ data + ' </h1>';
-  newDiv += '</div> </a>';
+    newDiv += '<h1 class = "zero-marg white-text center">'+ data + ' </h1>';
+    newDiv += '</div> </a>';
 
-  $('#flashy-content .reset-burger').append(newDiv); 
+    $('#flashy-content .reset-burger').append(newDiv); 
+  };
 };
 
 // Sidenav Functions
