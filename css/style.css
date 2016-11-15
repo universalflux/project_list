@@ -435,6 +435,10 @@ li.blue.darken-1, li.blue.darken-2, li.blue.darken-3, li.blue.darken-4, li.blue.
   /*z-index: 3;*/
 }
 
+#dropdown-b {
+  top: 290px !important;
+}
+
 #dropdown-c {
   top: 434px !important;
 }
@@ -645,7 +649,7 @@ ul > li > h5 {
 }
 
 #media {
-  background-image: url('../assets/images/statistics.jpg');
+  background-image: url('../assets/images/statistics.j');
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: 150px;
