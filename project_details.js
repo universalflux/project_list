@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  let h = window.innerHeight;
   let clickCount = 0;
   let clickCountTwo = 0;
   $('.item-show').hide();
@@ -23,6 +24,42 @@ $(document).ready(function(){
   //     $('.float-main').animate({left: '-=99px'},1000, floatyB())
   //   });
   // })();
+
+  $(window).resize(() => {
+  if($(window).height() > 925 && $('#bottom-container').hasClass('bottom-container') == false ){
+    $('#bottom-container').css({'margin-top': '', 'margin-left':''})
+    $('#bottom-container').addClass('bottom-container');
+    console.log('Awesome');
+  } else {
+  if($(window).height() <= 925) {
+    console.log($(window).height());
+    $('#bottom-container').removeClass('bottom-container').css({'margin-top':'-350px', 'margin-left':'90px'});
+    if ($(window).height() <= 800) {
+    $('#bottom-container').css({'margin-top':'-250px', 'margin-left':'90px'});
+    console.log('Here in two');
+  } else {
+    return "error";
+  }
+    }
+  }
+  });
+
+  if($(window).height() > 925 && $('#bottom-container').hasClass('bottom-container') == false ){
+    $('#bottom-container').css({'margin-top': '', 'margin-left':''})
+    $('#bottom-container').addClass('bottom-container');
+    console.log('Awesome');
+  } else {
+  if($(window).height() <= 925) {
+    console.log($(window).height());
+    $('#bottom-container').removeClass('bottom-container').css({'margin-top':'-350px', 'margin-left':'90px'});
+    if ($(window).height() <= 800) {
+    $('#bottom-container').css({'margin-top':'-250px', 'margin-left':'90px'});
+    console.log('Here in two');
+  } else {
+    return "error";
+  }
+    }
+  }
   $('.access-divs').on('click',(e) => {
     var divId   = e.currentTarget.id,
         mainId  = $('.main').attr('id'),
