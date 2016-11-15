@@ -230,6 +230,42 @@ body {
   opacity: 0.8;
 }
 
+
+.corner-circle-back {
+  background-image: url('https://www.materialui.co/materialIcons/av/fast_rewind_grey_192x192.png');
+  background-size: 60px 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 75px;
+  height: 75px;
+  position: relative;
+  margin-left: 100px;
+  padding: 0 0 0 0;
+  z-index: 1000;
+}
+
+.corner-circle-back:hover {
+  opacity: 0.8;
+}
+
+.corner-circle-forward {
+  background-image: url('https://www.materialui.co/materialIcons/av/fast_forward_grey_144x144.png');
+  background-size: 60px 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 75px;
+  height: 75px;
+  position: relative;
+  margin-left: 100px;
+  padding: 0 0 0 0;
+  z-index: 1000;
+}
+
+.corner-circle-forward:hover {
+  opacity: 0.8;
+}
+
+
 .zero-marg {
   margin-top: 0;
   padding: none;
@@ -354,21 +390,21 @@ li.blue.darken-1, li.blue.darken-2, li.blue.darken-3, li.blue.darken-4, li.blue.
 }
 
 #dropdown-c {
-  top: 376px !important;
+  top: 434px !important;
 }
 
 #dropdown-d {
-  top: 522px !important;
+  top: 578px !important;
   height: 450px;
 }
 
 #dropdown-e {
-  top: 668px !important;
+  top: 722px !important;
   height: 450px;
 }
 
 #dropdown-f {
-  top: 814px !important;
+  top: 866px !important;
   height: 450px;
 }
 
