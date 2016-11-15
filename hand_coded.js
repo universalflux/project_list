@@ -213,7 +213,7 @@ function hideSix(){
   };
 
   $('.corner-circle-forward').remove();
-  
+
   if(arr.length >= 7 && !$('.corner-circle-home').length) {
     $('<a href = "#"><div class = "corner-circle-home center circle left green z-depth-5">  </div></a>')
       .insertAfter('.corner-circle')
@@ -250,6 +250,9 @@ function listObj (jsonArr) {
       $(arr).each(function(index, object) {
         $('.item-show').append(($(document.createElement('p')).text(object)));
       });
+
+      $('.corner-circle-forward').remove();
+
   }
 
 // Add Team
@@ -464,7 +467,8 @@ $('.top-divs, .bottom-divs, .nav-link').on('click', (e) => {
      $('#put-here').html(selectedDiv.innerHTML);
      $('#put-here').attr('id', selectedDiv.id);
      $('<a href = ""><div class = "corner-circle-home center circle left purple lighten-1 z-depth-5">  </div></a>')
-     .insertAfter('.corner-circle').hide().fadeIn('slow');
+      .insertAfter('.corner-circle').hide().fadeIn('slow');
+     $('.corner-circle-forward').remove();
     //  currentDiv.addClass('float');
   },
   error: (err) => {
