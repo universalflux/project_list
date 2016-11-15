@@ -130,7 +130,11 @@ let createNewFloat = (data) => {
     }
       newDiv += '<h1 class = "zero-marg white-text center">'+ data + ' </h1>';
       newDiv += '</div> </a>';
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> c89fddefdae912d26695c9e92fc8ff082afc46f2
     $('#flashy-content .reset-burger').append(newDiv);
   }
 };
@@ -186,7 +190,11 @@ function pageOne () {
         .fadeIn('slow');
       };
     }
+<<<<<<< HEAD
   } 
+=======
+  }
+>>>>>>> c89fddefdae912d26695c9e92fc8ff082afc46f2
 }
 
 function pageTwo () {
@@ -233,10 +241,21 @@ function hideSix(){
 
 
 $('.add-project-btn').on('click', function (){
+  let script = document.createElement('script');
+  let arrCheck = [];
+  script.src = '/hand_coded.js';
+  script.id = 'hand-coded';
   var newProj = $('.add-project-input').val();
-
+  if (newProj.length <= 0) {
+    console.log("Rejected!");
+  } else {
   createNewFloat(newProj);
+  $('.add-project-input').val('');
   hideSix();
+  reScript();
+  $('body').append(script);
+  }
+})
 
   // $('#hand-coded').attr('id', 'destroyed');
   //   removeIt = document.getElementById('destroyed');
@@ -246,6 +265,15 @@ $('.add-project-btn').on('click', function (){
   //   document.body.appendChild(script);
   //   $(document).remove(removeIt);
 });
+
+
+let reScript = () =>{
+$('#hand-coded').attr('id', 'destroyed');
+  removeIt = document.getElementById('destroyed');
+  $(document).remove(removeIt);
+  return false;
+};
+
 
 $('.top-bar').on('click', '#pageOne', function (e){
   e.preventDefault();
@@ -476,6 +504,8 @@ $('.top-divs, .bottom-divs, .nav-link').on('click', (e) => {
     document.body.appendChild(script);
      // console.log("Success" + result);
      obtained.html(result);
+     $('#title').html(selectedDiv.innerHTML);
+     $('#title').attr('id', 'project-title');
      $('#put-here').attr('team', selectedTeam);
      $('#put-here').attr('media', selectedMedia);
      $('#put-here').attr('summary', selectedSummary);

@@ -7,10 +7,12 @@ body {
 }
 
 #title {
-  margin-right: 85px;
+  margin-right: 150px;
 }
 
-
+/*#project-title {
+  padding-top: -50px;
+}*/
 
 .container {
   margin: 0 auto 0 auto;
@@ -318,6 +320,8 @@ body {
     margin-left: -300px;
   }
 
+
+
   .main {
     width:250px;
     height: 300px;
@@ -359,8 +363,32 @@ body {
     max-height: 300px;
     max-width: 1000px;
   }
+
+  .top-container {
+
+  }
+  .top-container > row {
+    margin-bottom: -300px;
+    float: top;
+  }
+
+  #title {
+    margin-right: 100px;
+  }
+
 }
 
+@media(max-width: 1646px) {
+  #project-title {
+    margin-right: 600px;
+  }
+}
+
+@media(min-width:1700px){
+  #title {
+    padding-left:200px;
+  }
+}
 
 .top-divs {
   margin-top: 140px;
