@@ -486,7 +486,8 @@ $('.top-divs, .bottom-divs, .nav-link').on('click', (e) => {
     document.body.appendChild(script);
      // console.log("Success" + result);
      obtained.html(result);
-     $('#page-title').html(selectedDiv.innerHTML);
+     $('#title').html(selectedDiv.innerHTML);
+     $('#title').attr('id', 'project-title');
      $('#put-here').attr('team', selectedTeam);
      $('#put-here').attr('media', selectedMedia);
      $('#put-here').attr('summary', selectedSummary);

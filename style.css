@@ -10,7 +10,9 @@ body {
   margin-right: 150px;
 }
 
-
+/*#project-title {
+  padding-top: -50px;
+}*/
 
 .container {
   margin: 0 auto 0 auto;
@@ -448,11 +450,17 @@ body {
 
 }
 
-/*@media(min-width:1655px){
-  #title {
-    margin-right:20px;
+@media(max-width: 1646px) {
+  #project-title {
+    margin-right: 600px;
   }
-}*/
+}
+
+@media(min-width:1700px){
+  #title {
+    padding-left:200px;
+  }
+}
 
 .top-divs {
   margin-top: 140px;
