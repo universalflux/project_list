@@ -114,24 +114,25 @@ let createNewFloat = (data) => {
   let arr         = [].slice.call(divs);
   let dataID      = data.toLowerCase().replace(/\s+/g, '');
 
+  if (arr.length < 12) {
+    if (arr.length == 6) {
+      newDiv += "<div id = '" + dataID + "'class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float'>";
+    } else if (arr.length == 7) {
+      newDiv += "<div id = '" + dataID + "'class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float center-top'>";
+    } else if (arr.length == 8) {
+      newDiv += "<div id = '" + dataID + "'class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right-last float'>";
+    } else if (arr.length == 9) {
+      newDiv += "<div id = '" + dataID + "'class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float'>";
+    } else if (arr.length == 10) {
+      newDiv += "<div id = '" + dataID + "'class = 'col s12 m6 l3 blue darken-4 z-depth-3 bottom-divs push-right float center-bottom'>";
+    } else if (arr.length == 11) {
+      newDiv += "<div id = '" + dataID + "'class = 'col s12 m6 l3 blue darken-4 z-depth-3 bottom-divs push-right-last float'>";
+    }
+      newDiv += '<h1 class = "zero-marg white-text center">'+ data + ' </h1>';
+      newDiv += '</div> </a>';
 
-  if (arr.length == 6) {
-    newDiv += "<div id = '" + dataID + "'class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float'>";
-  } else if (arr.length == 7) {
-    newDiv += "<div id = '" + dataID + "'class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float center-top'>";
-  } else if (arr.length == 8) {
-    newDiv += "<div id = '" + dataID + "'class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right-last float'>";
-  } else if (arr.length == 9) {
-    newDiv += "<div id = '" + dataID + "'class = 'col s12 m6 l3 blue darken-4 z-depth-3 top-divs push-right float'>";
-  } else if (arr.length == 10) {
-    newDiv += "<div id = '" + dataID + "'class = 'col s12 m6 l3 blue darken-4 z-depth-3 bottom-divs push-right float center-bottom'>";
-  } else if (arr.length == 11) {
-    newDiv += "<div id = '" + dataID + "'class = 'col s12 m6 l3 blue darken-4 z-depth-3 bottom-divs push-right-last float'>";
+    $('#flashy-content .reset-burger').append(newDiv);
   }
-    newDiv += '<h1 class = "zero-marg white-text center">'+ data + ' </h1>';
-    newDiv += '</div> </a>';
-  $('#flashy-content .reset-burger').append(newDiv);
-
 };
 
 // Sidenav Functions
@@ -172,18 +173,20 @@ function pageOne () {
     $(page1).show();
   });
 
-  if(arr.length >= 7) {
-    if($('.corner-circle-forward').length >= 0) {
-    $('.corner-circle-forward').remove();
-    $('<a href = ""><div id="PageOne" class = "corner-circle-forward center circle left green z-depth-5">  </div></a>')
-      .insertAfter('.corner-circle')
-      .fadeIn('slow');
-    } else {
-    $('<a href = ""><div id="PageOne" class = "corner-circle-forward center circle left green z-depth-5">  </div></a>')
-      .insertAfter('.corner-circle')
-      .fadeIn('slow');
-  };
-}
+  if(arr.length < 12) {
+    if(arr.length >= 7) {
+      if($('.corner-circle-forward').length >= 0) {
+      $('.corner-circle-forward').remove();
+      $('<a href = ""><div id="PageOne" class = "corner-circle-forward center circle left green z-depth-5">  </div></a>')
+        .insertAfter('.corner-circle')
+        .fadeIn('slow');
+      } else {
+      $('<a href = ""><div id="PageOne" class = "corner-circle-forward center circle left green z-depth-5">  </div></a>')
+        .insertAfter('.corner-circle')
+        .fadeIn('slow');
+      };
+    }
+  }
 }
 
 function pageTwo () {
@@ -230,19 +233,29 @@ function hideSix(){
 
 
 $('.add-project-btn').on('click', function (){
-  var newProj = $('.add-project-input').val();
-
-  createNewFloat(newProj);
-  hideSix();
-
-$('#hand-coded').attr('id', 'destroyed');
-  removeIt = document.getElementById('destroyed');
   let script = document.createElement('script');
+  let arrCheck = [];
   script.src = '/hand_coded.js';
   script.id = 'hand-coded';
-  document.body.appendChild(script);
+  var newProj = $('.add-project-input').val();
+  if (newProj.length <= 0) {
+    console.log("Rejected!");
+  } else {
+  createNewFloat(newProj);
+  $('.add-project-input').val('');
+  hideSix();
+  reScript();
+  $('body').append(script);
+  }
+})
+
+// <<<<<<< HEAD
+let reScript = () =>{
+$('#hand-coded').attr('id', 'destroyed');
+  removeIt = document.getElementById('destroyed');
   $(document).remove(removeIt);
-});
+  return false;
+};
 
 $('.top-bar').on('click', '#pageOne', function (e){
   e.preventDefault();
@@ -361,8 +374,6 @@ $('.summary-btn').on('click', function (){
 
 });
 
-// Add Team
-
 
 // Add Progress
 $('.progress-btn').on('click', function (){
@@ -475,6 +486,7 @@ $('.top-divs, .bottom-divs, .nav-link').on('click', (e) => {
     document.body.appendChild(script);
      // console.log("Success" + result);
      obtained.html(result);
+     $('#page-title').html(selectedDiv.innerHTML);
      $('#put-here').attr('team', selectedTeam);
      $('#put-here').attr('media', selectedMedia);
      $('#put-here').attr('summary', selectedSummary);
