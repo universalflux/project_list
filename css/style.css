@@ -149,14 +149,14 @@ body {
 }
 
 #alpha {
-  background-image: url('/wolf.jpg');
+  background-image: url('../assets/images/wolf.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #beta {
-  background-image: url('/hand.png');
+  background-image: url('../assets/images/hand.png');
   background-size:cover;
   background-repeat:no-repeat;
   background-position: center;
@@ -170,28 +170,28 @@ body {
 }
 
 #cali {
-  background-image: url('/california.jpg');
+  background-image: url('../assets/images/california.jpg');
   background-size:cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #darwin {
-  background-image: url('/evolution.png');
+  background-image: url('../assets/images/evolution.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #enigma {
-  background-image: url('/inception.png');
+  background-image: url('../assets/images/inception.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #failsafe  {
-  background-image: url('/runman.png');
+  background-image: url('../assets/images/runman.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -225,7 +225,7 @@ body {
 }
 
 .corner-circle-home {
-  background-image: url('http://www.visualgoodness.com/webroot/images/global/icons/icon-home.png');
+  background-image: url('../assets/images/icon-home.png');
   background-size: 100px 100px;
   background-repeat: no-repeat;
   background-position: center;
@@ -243,7 +243,7 @@ body {
 
 
 .corner-circle-back {
-  background-image: url('https://www.materialui.co/materialIcons/av/fast_rewind_grey_192x192.png');
+  background-image: url('../assets/images/fast_rewind_grey_192x192.png');
   background-size: 60px 60px;
   background-repeat: no-repeat;
   background-position: center;
@@ -260,7 +260,7 @@ body {
 }
 
 .corner-circle-forward {
-  background-image: url('https://www.materialui.co/materialIcons/av/fast_forward_grey_144x144.png');
+  background-image: url('../assets/images/fast_forward_grey_144x144.png');
   background-size: 60px 60px;
   background-repeat: no-repeat;
   background-position: center;
@@ -620,32 +620,32 @@ ul > li > h5 {
 
 
 #team {
-  background-image: url('http://www.jencoinc.com/wp-content/uploads/2015/07/Team-large.jpg');
+  background-image: url('../assets/images/Team-large.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: 150px;
 }
 
 #summary {
-  background-image: url('http://997waystobeagreatspeaker.com/wp-content/uploads/2009/11/can-i-use-notes-while-speaking.jpg');
+  background-image: url('../assets/images/can-i-use-notes-while-speaking.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 #progress {
-  background-image: url('https://schoolpupiltracker.com/wp-content/uploads/2016/03/Progress.png');
+  background-image: url('../assets/Progress.png');
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 #tests {
-  background-image: url('http://834ff4dqetg4q20c469mp613.wpengine.netdna-cdn.com/wp-content/uploads/2012/11/chemical_odor_analysis.jpg');
+  background-image: url('../assets/images/chemical_odor_analysis.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 #media {
-  background-image: url('https://aos.iacpublishinglabs.com/question/aq/1400px-788px/statistics-on-media-influence_afbcd1fa-dee5-4703-a836-de4dde159043.jpg?domain=cx.aos.ask.com');
+  background-image: url('../assets/images/statistics.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: 150px;

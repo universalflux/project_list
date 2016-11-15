@@ -130,11 +130,7 @@ let createNewFloat = (data) => {
     }
       newDiv += '<h1 class = "zero-marg white-text center">'+ data + ' </h1>';
       newDiv += '</div> </a>';
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> c89fddefdae912d26695c9e92fc8ff082afc46f2
     $('#flashy-content .reset-burger').append(newDiv);
   }
 };
@@ -190,11 +186,7 @@ function pageOne () {
         .fadeIn('slow');
       };
     }
-<<<<<<< HEAD
-  } 
-=======
   }
->>>>>>> c89fddefdae912d26695c9e92fc8ff082afc46f2
 }
 
 function pageTwo () {
@@ -243,7 +235,7 @@ function hideSix(){
 $('.add-project-btn').on('click', function (){
   let script = document.createElement('script');
   let arrCheck = [];
-  script.src = '/hand_coded.js';
+  script.src = 'js/hand_coded.js';
   script.id = 'hand-coded';
   var newProj = $('.add-project-input').val();
   if (newProj.length <= 0) {
@@ -255,7 +247,8 @@ $('.add-project-btn').on('click', function (){
   reScript();
   $('body').append(script);
   }
-})
+});
+
 
   // $('#hand-coded').attr('id', 'destroyed');
   //   removeIt = document.getElementById('destroyed');
@@ -264,8 +257,7 @@ $('.add-project-btn').on('click', function (){
   //   script.id = 'hand-coded';
   //   document.body.appendChild(script);
   //   $(document).remove(removeIt);
-});
-
+// });
 
 let reScript = () =>{
 $('#hand-coded').attr('id', 'destroyed');
@@ -500,7 +492,7 @@ $('.top-divs, .bottom-divs, .nav-link').on('click', (e) => {
     let currentDiv;
     let obtained = $('#flashy-content');
     let script = document.createElement('script');
-    script.src = '/project_details.js';
+    script.src = 'js/project_details.js';
     document.body.appendChild(script);
      // console.log("Success" + result);
      obtained.html(result);

@@ -10,12 +10,12 @@ app.set('view engine', 'ejs');
 app.set('views', __dirname);
 
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('views/index');
 });
 
 app.get('/project_details', (req, res) => {
   console.log("in server.");
-  res.render('project_details');
+  res.render('views/project_details');
 })
 
 app.listen(currentPort, function(){
