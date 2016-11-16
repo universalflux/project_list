@@ -293,6 +293,70 @@ body {
   border-radius: 10px;
 }
 
+@media (max-width: 992px) {
+  .push-right {
+    margin-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+  }
+
+  .push-right-item {
+    margin-right: 0px;
+  }
+
+  .push-right-last {
+    margin-right: 0px;
+  }
+
+  /*#summary {
+    margin-left: -530px;
+  }
+
+  #progress {
+    margin-left: -280px;
+  }
+
+  #tests {
+    margin-left: -100px;
+  }*/
+
+  .main {
+    width:250px;
+    height: 300px;
+    margin-top: 100px;
+    margin-right: 10px;
+    margin-left: 0px;
+    margin-bottom: 100px;
+    display: none;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .access-divs {
+    margin-top: 300px;
+    margin-left: 10px;
+    position: relative;
+   /*Fixes max size for floating divs on the main page.*/
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    display: none;
+    border-radius: 10px;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  }
+
+  .bottom-container {
+    max-height: 100%;
+    width: 300px;
+  }
+
+  .top-container {
+    width: 500px;
+  }
+}
+
 @media (max-width: 1654px) {
   .push-right {
     margin-right: 10px;
@@ -308,17 +372,17 @@ body {
     margin-right: 0px;
   }
 
-  #summary {
-    margin-left: -700px;
+  /*#summary {
+    margin-left: -530px;
   }
 
   #progress {
-    margin-left: -460px;
+    margin-left: -280px;
   }
 
   #tests {
-    margin-left: -300px;
-  }
+    margin-left: -100px;
+  }*/
 
 
 
@@ -333,12 +397,20 @@ body {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-    /*z-index: 1;*/
+    z-index: 1;
   }
 
   .access-divs {
     /*margin-top: 300px;*/
     margin-left: 10px;
+   /*Fixes max size for floating divs on the main page.*/
+    /*width: 150px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    display: none;*/
+    border-radius: 10px;
+
     position: relative;
     text-shadow: 1px 1px 0 #000,
                  -1px -1px 0 #000,
@@ -357,13 +429,13 @@ body {
     /*display: none;
     border-radius: 10px;*/
   /*  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;*/
+
   }
 
   .bottom-container {
-    max-height: 300px;
-    max-width: 1000px;
-  }
+    margin-left: 500px;
 
+  }
   .top-container {
 
   }
@@ -392,7 +464,7 @@ body {
 
 .top-divs {
   margin-top: 140px;
-/* Fixes max size for floating divs on the main page. */
+ /*Fixes max size for floating divs on the main page.*/
   width: 300px;
   height: 200px;
   overflow: hidden;
@@ -402,7 +474,7 @@ body {
 .bottom-divs {
   margin-left: 10px;
   margin-top: 100px;
-/* Fixes max size for floating divs on the main page. */
+ /*Fixes max size for floating divs on the main page.*/
   width: 300px;
   height: 200px;
   overflow: hidden;
@@ -433,10 +505,6 @@ li.blue.darken-1, li.blue.darken-2, li.blue.darken-3, li.blue.darken-4, li.blue.
   padding-top: 25px;
   margin-top: 60px;
   /*z-index: 3;*/
-}
-
-#dropdown-b {
-  top: 290px !important;
 }
 
 #dropdown-c {
@@ -637,7 +705,7 @@ ul > li > h5 {
 }
 
 #progress {
-  background-image: url('../assets/Progress.png');
+  background-image: url('../assets/images/Progress.png');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -649,7 +717,7 @@ ul > li > h5 {
 }
 
 #media {
-  background-image: url('../assets/images/statistics.j');
+  background-image: url('../assets/images/statistics.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: 150px;
@@ -657,11 +725,19 @@ ul > li > h5 {
 
 .bottom-container {
   padding-left: 90px;
-  margin-top: -500px;
+  margin-top: -480px;
+
+
 }
 
 .top-container {
   overflow: none;
+
+}
+
+.bottom-container-eightnineseven {
+  margin-top: -350px;
+  padding-left: 90px;
 }
 
 /*.detail-items {

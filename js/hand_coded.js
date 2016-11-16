@@ -247,25 +247,15 @@ $('.add-project-btn').on('click', function (){
   reScript();
   $('body').append(script);
   }
-});
+})
 
-
-  // $('#hand-coded').attr('id', 'destroyed');
-  //   removeIt = document.getElementById('destroyed');
-  //   let script = document.createElement('script');
-  //   script.src = '/hand_coded.js';
-  //   script.id = 'hand-coded';
-  //   document.body.appendChild(script);
-  //   $(document).remove(removeIt);
-// });
-
+// <<<<<<< HEAD
 let reScript = () =>{
 $('#hand-coded').attr('id', 'destroyed');
   removeIt = document.getElementById('destroyed');
   $(document).remove(removeIt);
   return false;
 };
-
 
 $('.top-bar').on('click', '#pageOne', function (e){
   e.preventDefault();

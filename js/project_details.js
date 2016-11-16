@@ -6,7 +6,7 @@ $(document).ready(function(){
   let link = document.createElement('link');
   link.setAttribute('rel', 'stylesheet');
   link.type = 'text/css';
-  link.href = '/project_details.css';
+  link.href = 'css/project_details.css';
   document.head.appendChild(link);
   $('.main').fadeIn(1000);
   $('.float-main').animate({
