@@ -57,7 +57,7 @@ body {
   margin: 0 auto 0 auto;
 }
 
-.float {
+/*.float {
   animation: floatme 4s infinite;
   -webkit-animation: floatme 4s infinite;
   transition-timing-function: ease-in-out;
@@ -67,7 +67,7 @@ body {
   animation: floatmeRev 3s infinite;
   -webkit-animation: floatme 3s infinite;
   transition-timing-function: ease-in-out;
-}
+}*/
 
 .plus-icon {
   width: 50px;

@@ -77,11 +77,11 @@
 
 }
 
-.float-main {
+/*.float-main {
   animation: floatMain 2s infinite;
   -webkit-animation: floatMain 2s infinite;
   transition-timing-function: ease-in-out;
-}
+}*/
 
 .overlay {
   background-color: purple;
